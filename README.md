@@ -6,7 +6,7 @@ Bu yazılım, birçok İnternet Servis Sağlayıcısında bulunan ve belirli web
 
 Optik ayırıcı veya port yansıtma (**Pasif DPI**) kullanılarak bağlanan ve herhangi bir veriyi engellemeyen ancak istenen hedeften daha hızlı yanıt veren DPI'ları ve sırayla bağlanan **Aktif DPI**'ları işler.
 
-**Windows 7, 8, 8.1, 10 ve 11** işletim sistemlerinde, yapılandırma dosyalarının **Yönetici** olarak çalıştırılması gerekir.
+**Windows 7, 8, 8.1, 10 ve 11** işletim sistemlerinde, komut dosyalarının **Yönetici** olarak çalıştırılması gerekir.
 
 Virüs, Veri Sızıntısı ve Bitcoin Madenciliği
 =========================
@@ -20,13 +20,13 @@ Kodların ne işe yaradığını ve hangi amaçla yazıldığını öğrenmek i�
 
 # Hızlı Başlangıç
 
-* **Türkiye** için [son sürümler sayfasından](https://github.com/delidolu1adam/GoodbyeDPI_Turkiye/releases) ZIP dosyasını indirin, ZIP dosyasını ayıklayın ve içindeki **01 - CloudFlare DNS Yönlendirmeli.cmd** yapılandırma dosyasına sağ tıklayarak **Yönetici Olarak** çalıştırın.
+* **Türkiye** için [son sürümler sayfasından](https://github.com/delidolu1adam/GoodbyeDPI_Turkiye/releases) ZIP dosyasını indirin, ZIP dosyasını ayıklayın ve içindeki **01 - CloudFlare DNS Yönlendirmeli.cmd** komut dosyasına sağ tıklayarak **Yönetici Olarak** çalıştırın.
 
-* **Rusya** için [son sürümler sayfasından](https://github.com/delidolu1adam/GoodbyeDPI_Turkiye/releases) ZIP dosyasını indirin, ZIP dosyasını ayıklayın ve içindeki **07 - Yandex DNS Yönlendirmeli.cmd** yapılandırma dosyasına sağ tıklayarak **Yönetici Olarak** çalıştırın.
+* **Rusya** için [son sürümler sayfasından](https://github.com/delidolu1adam/GoodbyeDPI_Turkiye/releases) ZIP dosyasını indirin, ZIP dosyasını ayıklayın ve içindeki **07 - Yandex DNS Yönlendirmeli.cmd** komut dosyasına sağ tıklayarak **Yönetici Olarak** çalıştırın.
 
-* **Diğer Ülkeler** için [son sürümler sayfasından](https://github.com/delidolu1adam/GoodbyeDPI_Turkiye/releases) ZIP dosyasını indirin, ZIP dosyasını ayıklayın ve içindeki **01 - CloudFlare DNS Yönlendirmeli.cmd** yapılandırma dosyasına sağ tıklayarak **Yönetici Olarak** çalıştırın.
+* **Diğer Ülkeler** için [son sürümler sayfasından](https://github.com/delidolu1adam/GoodbyeDPI_Turkiye/releases) ZIP dosyasını indirin, ZIP dosyasını ayıklayın ve içindeki **01 - CloudFlare DNS Yönlendirmeli.cmd** komut dosyasına sağ tıklayarak **Yönetici Olarak** çalıştırın.
 
-Bu yapılandırma dosyaları, GoodbyeDPI'ı önerilen modda başlatır ve DNS çözücü yönlendirmesini çalıştırdığınız yapılandırma dosyasına göre CloudFlare, Google, Quad9, OpenDNS, AdGuard, Yandex ve Comodo DNS adreslerine (DNS zehirlenmesini engellemek için) standart olmayan bir port üzerinden yapar. Eğer çalıştıysa — tebrikler! Şu anda olduğu gibi kullanabilirsiniz veya daha fazla yapılandırma yapabilirsiniz.
+Bu komut dosyaları, GoodbyeDPI'ı önerilen modda başlatır ve DNS çözücü yönlendirmesini çalıştırdığınız komut dosyasına göre CloudFlare, Google, Quad9, OpenDNS, AdGuard, Yandex ve Comodo DNS adreslerine (DNS zehirlenmesini engellemek için) standart olmayan bir port üzerinden yapar. Eğer çalıştıysa — tebrikler! Şu anda olduğu gibi kullanabilirsiniz veya daha fazla yapılandırma yapabilirsiniz.
 
 # Nasıl Kullanılır?
 
@@ -34,47 +34,75 @@ Download [latest version from Releases page](https://github.com/ValdikSS/Goodbye
 
 ## Desteklenen Argümanlar
 Programınızın sürümü hakkında tüm bilgileri öğrenmek için başlangıçta -h (--help) argümanını kullanın.
-```ansi
+```
 Örnek Kullanım: goodbyedpi.exe -5 **veya** goodbyedpi.exe -5 --dns-addr 1.1.1.1 --dns-port 53 --dnsv6-addr 2606:4700:4700::1111 --dnsv6-port 53
 
--p: Pasif DPI'yi engelle
--q: QUIC/HTTP3'ü engelle
--r: Host başlığını "hoSt" olarak değiştir
--s: Host başlığı ile değeri arasındaki boşluğu kaldır
--m: Host başlığındaki harfleri karıştır (test.com -> tEsT.cOm)
--f <değer>: HTTP parçalama (fragmentation) değerini ayarla
--k <değer>: HTTP kalıcı (keep-alive) bağlantı parçalamayı etkinleştir ve değeri ayarla
--n: -k etkinleştirildiğinde ilk segmentin ACK'ını bekleme
--e <değer>: HTTPS parçalama değerini ayarla
--a: Yöntem (Method) ile İstek URI'sı (Request-URI) arasında ekstra boşluk (bu, -s'yi etkinleştirir ve bazı siteleri bozabilir)
--w: İşlenen tüm portlarda HTTP trafiğini bulmayı ve çözümlemeyi dene (yalnızca port 80'de değil)
---port <değer>: Parçalama yapacak ek bir TCP portu (ve -w ile HTTP hileleri)
---ip-id <değer>: Ekstra bir IP kimliğini (decimal) yönet, bu kimlik ile yönlendirmeleri ve TCP RST'leri engelle. Bu seçenek birden fazla kez kullanılabilir.
---dns-addr <değer>: UDP DNS isteklerini sağlanan IP adresine yönlendir (deneysel)
---dns-port <değer>: UDP DNS isteklerini sağlanan porta yönlendir (varsayılan 53)
---dnsv6-addr <değer>: UDPv6 DNS isteklerini sağlanan IPv6 adresine yönlendir (deneysel)
---dnsv6-port <değer>: UDPv6 DNS isteklerini sağlanan porta yönlendir (varsayılan 53)
---dns-verb: Ayrıntılı DNS yönlendirme mesajları yazdır
---blacklist <txtfile>: Yalnızca verilen metin dosyasındaki host adları ve alt alan adları için engelleme hilelerini uygula (HTTP Host/TLS SNI). Bu seçenek birden fazla kez verilebilir.
---allow-no-sni: TLS SNI tespit edilemezse, --blacklist etkinleştirildiğinde engelleme işlemini uygula.
---frag-by-sni: Eğer TLS paketinde SNI tespit edilirse, paketi SNI değeri öncesinde parçala.
---set-ttl <değer>: Sahte İstek Modunu etkinleştir ve sağlanan TTL değeri ile gönder. DİKKATLİ KULLANIN! Web sitelerini beklenmedik şekillerde bozabilir. Dikkatli kullanın (veya --blacklist ile).
---auto-ttl [a1-a2-m]: Sahte İstek Modunu etkinleştir, TTL'yi otomatik olarak tespit et ve mesafeye göre azalt. Eğer mesafe a2'den kısa ise TTL a2 kadar azalır. Daha uzunsa, (a1; a2) ölçeği kullanılarak mesafe ağırlık olarak kabul edilir. Eğer sonuç TTL m’den büyükse, TTL'yi m olarak ayarla. Varsayılan: --auto-ttl 1-4-10. Ayrıca --min-ttl 3'ü ayarlar. DİKKATLİ KULLANIN! Web sitelerini beklenmedik şekilde bozabilir. Dikkatli kullanın (veya --blacklist ile).
---min-ttl <değer>: Sahte İstek Modunda --set-ttl ve --auto-ttl modlarında gönderilecek Sahte İstek için minimum TTL mesafesi (128/64 - TTL).
---wrong-chksum: Sahte İstek Modunu etkinleştir ve yanlış TCP checksum ile gönder. Sanal makinelerde veya bazı yönlendiricilerle çalışmayabilir, ancak set-ttl’den daha güvenlidir.
---wrong-seq: Sahte İstek Modunu etkinleştir ve TCP SEQ/ACK geçmişteki bir değeriyle gönder.
---native-frag: Paketleri daha küçük parçalara ayırarak, pencere boyutunu küçültmeden gönder. Daha hızlı çalışır (bağlantıyı yavaşlatmaz) ve daha iyi sonuç verir.
---reverse-frag: --native-frag gibi paketleri parçalara ayır, ancak ters sırayla gönder. HTTPS TLS ClientHello segmentlerini işleyemeyen web siteleriyle çalışır (çünkü TCP akışını "birleştirilmiş" alırlar).
---fake-from-hex <değer>: Sahte İstek Modunda HEX değerlerinden (örneğin, 1234abcDEF) sahte paketler yükle. Bu seçenek birden fazla kez verilebilir, bu durumda her sahte paket komut satırı argüman sırasına göre her istekte gönderilir.
---fake-with-sni <değer>: Sahte İstek Modunda verilen SNI alan adı ile sahte paketler üret. Bu paketler Mozilla Firefox 130 TLS ClientHello paketini taklit eder (rastgele üretilmiş sahte SessionID, anahtar paylaşımları ve ECH grease ile).
---fake-gen <değer>: Sahte İstek Modu için rastgele doldurulmuş sahte paketler üret, değer kadar (30'a kadar).
---fake-resend <değer>: Her sahte paketi belirtilen sayı kadar yeniden gönder. Varsayılan: 1 (her paketi bir kez gönder).
---max-payload [değer]: TCP yük verisi [değer]’den büyük olan paketler işlenmeyecektir. Bu seçenek, zaten kurulmuş oturumlarda büyük miktarda veriyi atlayarak CPU kullanımını azaltmak için kullanılabilir. Büyük HTTP isteklerinin işlenmesini engelleyebilir. Varsayılan: --max-payload 1200.
+ -p          block passive DPI
+ -q          block QUIC/HTTP3
+ -r          replace Host with hoSt
+ -s          remove space between host header and its value
+ -m          mix Host header case (test.com -> tEsT.cOm)
+ -f <value>  set HTTP fragmentation to value
+ -k <value>  enable HTTP persistent (keep-alive) fragmentation and set it to value
+ -n          do not wait for first segment ACK when -k is enabled
+ -e <value>  set HTTPS fragmentation to value
+ -a          additional space between Method and Request-URI (enables -s, may break sites)
+ -w          try to find and parse HTTP traffic on all processed ports (not only on port 80)
+ --port        <value>    additional TCP port to perform fragmentation on (and HTTP tricks with -w)
+ --ip-id       <value>    handle additional IP ID (decimal, drop redirects and TCP RSTs with this ID).
+                          This option can be supplied multiple times.
+ --dns-addr    <value>    redirect UDP DNS requests to the supplied IP address (experimental)
+ --dns-port    <value>    redirect UDP DNS requests to the supplied port (53 by default)
+ --dnsv6-addr  <value>    redirect UDPv6 DNS requests to the supplied IPv6 address (experimental)
+ --dnsv6-port  <value>    redirect UDPv6 DNS requests to the supplied port (53 by default)
+ --dns-verb               print verbose DNS redirection messages
+ --blacklist   <txtfile>  perform circumvention tricks only to host names and subdomains from
+                          supplied text file (HTTP Host/TLS SNI).
+                          This option can be supplied multiple times.
+ --allow-no-sni           perform circumvention if TLS SNI can't be detected with --blacklist enabled.
+ --frag-by-sni            if SNI is detected in TLS packet, fragment the packet right before SNI value.
+ --set-ttl     <value>    activate Fake Request Mode and send it with supplied TTL value.
+                          DANGEROUS! May break websites in unexpected ways. Use with care (or --blacklist).
+ --auto-ttl    [a1-a2-m]  activate Fake Request Mode, automatically detect TTL and decrease
+                          it based on a distance. If the distance is shorter than a2, TTL is decreased
+                          by a2. If it's longer, (a1; a2) scale is used with the distance as a weight.
+                          If the resulting TTL is more than m(ax), set it to m.
+                          Default (if set): --auto-ttl 1-4-10. Also sets --min-ttl 3.
+                          DANGEROUS! May break websites in unexpected ways. Use with care (or --blacklist).
+ --min-ttl     <value>    minimum TTL distance (128/64 - TTL) for which to send Fake Request
+                          in --set-ttl and --auto-ttl modes.
+ --wrong-chksum           activate Fake Request Mode and send it with incorrect TCP checksum.
+                          May not work in a VM or with some routers, but is safer than set-ttl.
+ --wrong-seq              activate Fake Request Mode and send it with TCP SEQ/ACK in the past.
+ --native-frag            fragment (split) the packets by sending them in smaller packets, without
+                          shrinking the Window Size. Works faster (does not slow down the connection)
+                          and better.
+ --reverse-frag           fragment (split) the packets just as --native-frag, but send them in the
+                          reversed order. Works with the websites which could not handle segmented
+                          HTTPS TLS ClientHello (because they receive the TCP flow "combined").
+ --fake-from-hex <value>  Load fake packets for Fake Request Mode from HEX values (like 1234abcDEF).
+                          This option can be supplied multiple times, in this case each fake packet
+                          would be sent on every request in the command line argument order.
+ --fake-with-sni <value>  Generate fake packets for Fake Request Mode with given SNI domain name.
+                          The packets mimic Mozilla Firefox 130 TLS ClientHello packet
+                          (with random generated fake SessionID, key shares and ECH grease).
+                          Can be supplied multiple times for multiple fake packets.
+ --fake-gen <value>       Generate random-filled fake packets for Fake Request Mode, value of them
+                          (up to 30).
+ --fake-resend <value>    Send each fake packet value number of times.
+                          Default: 1 (send each packet once).
+ --max-payload [value]    packets with TCP payload data more than [value] won't be processed.
+                          Use this option to reduce CPU usage by skipping huge amount of data
+                          (like file transfers) in already established sessions.
+                          May skip some huge HTTP requests from being processed.
+                          Default (if set): --max-payload 1200.
+
 Eski Mod Ayarları:
 -1: -p -r -s -f 2 -k 2 -n -e 2 (en uyumlu mod)
 -2: -p -r -s -f 2 -k 2 -n -e 40 (HTTPS için daha iyi hız, yine de uyumlu)
 -3: -p -r -s -e 40 (HTTP ve HTTPS için daha iyi hız)
 -4: -p -r -s (en iyi hız)
+
 Modern Mod Ayarları (daha stabil, daha uyumlu, daha hızlı):
 -5: -f 2 -e 2 --auto-ttl --reverse-frag --max-payload
 -6: -f 2 -e 2 --wrong-seq --reverse-frag --max-payload
@@ -94,31 +122,31 @@ Daha sonra Türkiye ve diğer Ülkeler için **08 - DNS Yönlendirmesiz v1.cmd**
 
 Sağlayıcınız DNS isteklerini engelliyorsa, standart olmayan bir portta (örneğin Yandex DNS `77.88.8.8:1253`) çalışan genel bir DNS çözücüsüne `--dns-addr` seçeneğini kullanmak veya üçüncü taraf uygulamaları kullanarak HTTPS/TLS üzerinden DNS yapılandırmak isteyebilirsiniz.
 
-.cmd betiklerini kontrol edin ve tercihinize ve ağ koşullarınıza göre değiştirin.
+.cmd komut dosyalarını kontrol edin ve tercihinize ve ağ koşullarınıza göre değiştirin.
 
-# How does it work
+# Nasıl Çalışır?
 
-### Passive DPI
+### Pasif DPI
 
-Most Passive DPI send HTTP 302 Redirect if you try to access blocked website over HTTP and TCP Reset in case of HTTPS, faster than destination website. Packets sent by DPI usually have IP Identification field equal to `0x0000` or `0x0001`, as seen with Russian providers. These packets, if they redirect you to another website (censorship page), are blocked by GoodbyeDPI.
+Çoğu Pasif DPI, HTTP üzerinden engellenen web sitesine erişmeye çalışırsanız HTTP 302 Yönlendirmesi gönderir ve HTTPS durumunda TCP Sıfırlama, hedef web sitesinden daha hızlıdır. DPI tarafından gönderilen paketlerin genellikle IP Kimlik alanı `0x0000` veya `0x0001`'e eşittir, Rus sağlayıcılarda görüldüğü gibi. Bu paketler, sizi başka bir web sitesine (sansür sayfası) yönlendirirse, GoodbyeDPI tarafından engellenir.
 
-### Active DPI
+### Aktif DPI
 
-Active DPI is more tricky to fool. Currently the software uses 7 methods to circumvent Active DPI:
+Aktif DPI'ı kandırmak daha zordur. Şu anda yazılım Aktif DPI'ı atlatmak için 7 yöntem kullanıyor:
 
-* TCP-level fragmentation for first data packet
-* TCP-level fragmentation for persistent (keep-alive) HTTP sessions
-* Replacing `Host` header with `hoSt`
-* Removing space between header name and value in `Host` header
-* Adding additional space between HTTP Method (GET, POST etc) and URI
-* Mixing case of Host header value
-* Sending fake HTTP/HTTPS packets with low Time-To-Live value, incorrect checksum or incorrect TCP Sequence/Acknowledgement numbers to fool DPI and prevent delivering them to the destination
+* İlk veri paketi için TCP düzeyinde parçalanma
+* Kalıcı (canlı tutma) HTTP oturumları için TCP düzeyinde parçalanma
+* `Host` başlığını `hoSt` ile değiştirme
+* `Host` başlığındaki başlık adı ve değer arasındaki boşluğu kaldırma
+* HTTP Yöntemi (GET, POST vb.) ve URI arasına ek boşluk ekleme
+* Host başlık değerinin harflerini karıştırma
+* DPI'ı kandırmak ve bunların hedefe ulaşmasını engellemek için düşük Yaşam Süresi değerine, yanlış toplam kontrolüne veya yanlış TCP Dizisi/Onay numaralarına sahip sahte HTTP/HTTPS paketleri gönderme
 
-These methods should not break any website as they're fully compatible with TCP and HTTP standards, yet it's sufficient to prevent DPI data classification and to circumvent censorship. Additional space may break some websites, although it's acceptable by HTTP/1.1 specification (see 19.3 Tolerant Applications).
+Bu yöntemler TCP ve HTTP standartlarıyla tamamen uyumlu oldukları için hiçbir web sitesini bozmamalıdır, ancak DPI veri sınıflandırmasını önlemek ve sansürü atlatmak için yeterlidir. Ek boşluk bazı web sitelerini bozabilir, ancak HTTP/1.1 spesifikasyonuna göre kabul edilebilirdir (bkz. 19.3 Toleranslı Uygulamalar).
 
-The program loads WinDivert driver which uses Windows Filtering Platform to set filters and redirect packets to the userspace. It's running as long as console window is visible and terminates when you close the window.
+Program, filtreleri ayarlamak ve paketleri kullanıcı alanına yönlendirmek için Windows Filtreleme Platformu kullanan WinDivert sürücüsünü yükler. Konsol penceresi görünür olduğu sürece çalışır ve pencereyi kapattığınızda sonlanır.
 
-# How to build from source
+# Kaynaktan Nasıl İnşa Edilir?
 
 This project can be build using **GNU Make** and [**mingw**](https://mingw-w64.org). The only dependency is [WinDivert](https://github.com/basil00/Divert).
 
@@ -130,11 +158,11 @@ And for x86_64:
 
 `make CPREFIX=x86_64-w64-mingw32- BIT64=1 WINDIVERTHEADERS=/path/to/windivert/include WINDIVERTLIBS=/path/to/windivert/amd64`
 
-# How to install as Windows Service
+# Windows Hizmeti Olarak Nasıl Kurulur?
 
-Check examples in `service_install_russia_blacklist.cmd`, `service_install_russia_blacklist_dnsredir.cmd` and `service_remove.cmd` scripts.
+Bunun için `11 - Windows Hizmeti Olarak Kur - DNS Yönlendirmeli v1.cmd`, `12 - Windows Hizmeti Olarak Kur - DNS Yönlendirmeli v2.cmd`, `13 - Windows Hizmeti Olarak Kur - DNS Yönlendirmeli v3.cmd`, `14 - Windows Hizmeti Olarak Kur - DNS Yönlendirmeli v4.cmd`, `15 - Windows Hizmeti Olarak Kur - DNS Yönlendirmesiz Karaliste.cmd`, `16 - Windows Hizmeti Olarak Kur - DNS Yönlendirmeli Karaliste.cmd` ve `17 - Hizmetleri Durdur ve Kaldır.cmd` komut dosyalarındaki yapılandırma örneklerini kontrol edin.
 
-Modify them according to your own needs.
+Bunları kendi ihtiyaçlarınıza göre değiştirin.
 
 # Known issues
 
