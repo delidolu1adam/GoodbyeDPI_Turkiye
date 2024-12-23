@@ -20,11 +20,11 @@ Kodların ne işe yaradığını ve hangi amaçla yazıldığını öğrenmek i�
 
 # Hızlı Başlangıç
 
-* **Türkiye** ve **Diğer Ülkeler** için [son sürümler sayfasından](https://github.com/delidolu1adam/GoodbyeDPI_Turkiye/releases) dosyasını indirin, ZIP dosyasını ayıklayın ve içindeki **01 - CloudFlare DNS Yönlendirmeli.cmd** yapılandırma dosyasına sağ tıklayarak **Yönetici Olarak** çalıştırın.
+* **Türkiye** için [son sürümler sayfasından](https://github.com/delidolu1adam/GoodbyeDPI_Turkiye/releases) ZIP dosyasını indirin, ZIP dosyasını ayıklayın ve içindeki **01 - CloudFlare DNS Yönlendirmeli.cmd** yapılandırma dosyasına sağ tıklayarak **Yönetici Olarak** çalıştırın.
 
-* **Rusya** için [son sürümler sayfasından](https://github.com/delidolu1adam/GoodbyeDPI_Turkiye/releases) dosyasını indirin, ZIP dosyasını ayıklayın ve içindeki **07 - Yandex DNS Yönlendirmeli.cmd** yapılandırma dosyasına sağ tıklayarak **Yönetici Olarak** çalıştırın.
+* **Rusya** için [son sürümler sayfasından](https://github.com/delidolu1adam/GoodbyeDPI_Turkiye/releases) ZIP dosyasını indirin, ZIP dosyasını ayıklayın ve içindeki **07 - Yandex DNS Yönlendirmeli.cmd** yapılandırma dosyasına sağ tıklayarak **Yönetici Olarak** çalıştırın.
 
-* **Diğer Ülkeler** için [son sürümler sayfasından](https://github.com/delidolu1adam/GoodbyeDPI_Turkiye/releases) dosyasını indirin, ZIP dosyasını ayıklayın ve içindeki **01 - CloudFlare DNS Yönlendirmeli.cmd** yapılandırma dosyasına sağ tıklayarak **Yönetici Olarak** çalıştırın.
+* **Diğer Ülkeler** için [son sürümler sayfasından](https://github.com/delidolu1adam/GoodbyeDPI_Turkiye/releases) ZIP dosyasını indirin, ZIP dosyasını ayıklayın ve içindeki **01 - CloudFlare DNS Yönlendirmeli.cmd** yapılandırma dosyasına sağ tıklayarak **Yönetici Olarak** çalıştırın.
 
 Bu yapılandırma dosyaları, GoodbyeDPI'ı önerilen modda başlatır ve DNS çözücü yönlendirmesini çalıştırdığınız yapılandırma dosyasına göre CloudFlare, Google, Quad9, OpenDNS, AdGuard, Yandex ve Comodo DNS adreslerine (DNS zehirlenmesini engellemek için) standart olmayan bir port üzerinden yapar. Eğer çalıştıysa — tebrikler! Şu anda olduğu gibi kullanabilirsiniz veya daha fazla yapılandırma yapabilirsiniz.
 
@@ -85,11 +85,11 @@ Modern Modlar (daha stabil, daha uyumlu, daha hızlı):
 
 Not: Bu argümanlar, çeşitli internet trafiği manipülasyonları ve güvenlik ayarları yaparak, kullanıcıların sansürü aşmalarını ve internet trafiği üzerinde daha fazla kontrol sahibi olmalarını sağlar. **--wrong-seq** ve **--wrong-chksum** kombinasyonu iki farklı sahte paket üretir.
 ```
-## How to check
-To check if your ISP's DPI could be circumvented, first make sure that your provider does not poison DNS answers by enabling "Secure DNS (DNS over HTTPS)" option in your browser.
+## Nasıl Kontrol Edilir?
+İnternet servis sağlayıcınızın DPI'sinin aşılabileceğini kontrol etmek için öncelikle tarayıcınızda "Güvenli DNS (HTTPS üzerinden DNS)" seçeneğini etkinleştirerek sağlayıcınızın DNS yanıtlarını zehirlemediğinden emin olun.
 
-* **Chrome**: Settings → [Privacy and security](chrome://settings/security) → Use secure DNS → With: NextDNS
-* **Firefox**: [Settings](about:preferences) → Network Settings → Enable DNS over HTTPS → Use provider: NextDNS
+* **Google Chrome**: [Ayarlar](chrome://settings/) → [Gizlilik ve güvenlik](chrome://settings/privacy) → [Güvenlik](chrome://settings/security) → Güvenli DNS kullan → DNS sağlayıcısı seç: CloudFlare
+* **Mozilla Firefox**: [Ayarlar](about:preferences) → Ağ Ayarları → HTTPS üzerinde DNS'yi etkinleştir → DNS sağlayıcısı seç: CloudFlare
 
 Then run the `goodbyedpi.exe` executable without any options. If it works — congratulations! You can use it as-is or configure further, for example by using `--blacklist` option if the list of blocked websites is known and available for your country.
 
