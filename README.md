@@ -1,5 +1,7 @@
 Bu proje Türkiye'de kalıcı olarak engellenmiş **Discord** ve bazı durumlarda engellenen **Instagram**, **Youtube** vb. web sitesi ve uygulamalara VPN kullanmadan ve İnternet hızında bir değişiklik olmadan giriş yapmanızı sağlamak için GoodByeDPI'ın orjinal reposundan çatallanmış ve düzenlenmiş bir sürümüdür.
 
+Daha fazla bilgi edinmek isterseniz indirdiğiniz **GoodBye DPI Türkiye v0.2.3rc3/assets/documents** klasör içeriğindeki **_Turkish** etiketli dosyalara göz atın.
+
 GoodbyeDPI — Derin Paket İncelemesi Atlatma Aracı
 =========================
 Bu yazılım, birçok İnternet Servis Sağlayıcısında bulunan ve belirli web sitelerine erişimi engelleyen **Derin Paket İnceleme Sistemleri**ni atlatmak için tasarlanmıştır.
@@ -169,7 +171,6 @@ Bunun için `11 - Windows Hizmeti Olarak Kur - DNS Yönlendirmeli v1.cmd`, `12 -
 * QUIK ticaret yazılımı [GoodbyeDPI ile çakışabilir](https://github.com/ValdikSS/GoodbyeDPI/issues/677#issuecomment-2390595606). Çözüm için önce QUIK'i daha sonra GoodbyeDPI'ı başlatın.
 * ~~Bazı SSL/TLS yığınları parçalanmış ClientHello paketlerini işleyemiyor ve HTTPS web siteleri açılmıyor. Hata: [#4](https://github.com/ValdikSS/GoodbyeDPI/issues/4), [#64](https://github.com/ValdikSS/GoodbyeDPI/issues/64).~~ Parçalanma sorunları v0.1.7'de düzeltildi.
 * ~~ESET Antivirus, WinDivert sürücüsüyle uyumsuzdur [#91](https://github.com/ValdikSS/GoodbyeDPI/issues/91). Bu büyük ihtimalle WinDivert değil, antivirüs hatasıdır.~~
-
 
 # Benzer Projeler
 
