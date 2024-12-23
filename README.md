@@ -36,52 +36,52 @@ Download [latest version from Releases page](https://github.com/ValdikSS/Goodbye
 Programınızın sürümü hakkında tüm bilgileri öğrenmek için başlangıçta -h (--help) argümanını kullanın.
 ```
 Kullanımı: goodbyedpi.exe [SEÇENEKLER...]
--p: Pasif DPI'yi engelle.
--q: QUIC/HTTP3'ü engelle.
--r: Host başlığını "hoSt" olarak değiştir.
--s: Host başlığı ile değeri arasındaki boşluğu kaldır.
--m: Host başlığının yazımını karıştır (örneğin: test.com -> tEsT.cOm).
--f <değer>: HTTP parçalama değerini belirle.
--k <değer>: HTTP sürekli bağlantı (keep-alive) parçalanmasını etkinleştir ve değeri belirle.
--n: -k etkinleştirildiğinde ilk segmentin ACK'sini bekleme.
--e <değer>: HTTPS parçalama değerini belirle.
--a: Method ile Request-URI arasına ek boşluk ekle (bu -s'yi etkinleştirir, bazı siteleri bozabilir).
--w: İşlenen tüm portlarda HTTP trafiğini bulmaya ve analiz etmeye çalış (sadece port 80'de değil).
---port <değer>: Parçalama işlemi yapmak için ek bir TCP portu belirle (ve -w ile HTTP hilelerini uygula).
---ip-id <değer>: Ek IP ID’sini işle (onaltılık, bu ID ile yönlendirmeleri ve TCP RST’leri engelle). Bu seçenek birden fazla kez kullanılabilir.
---dns-addr <değer>: UDP DNS isteklerini belirtilen IP adresine yönlendir (deneysel).
---dns-port <değer>: UDP DNS isteklerini belirtilen port numarasına yönlendir (varsayılan 53).
---dnsv6-addr <değer>: UDPv6 DNS isteklerini belirtilen IPv6 adresine yönlendir (deneysel).
---dnsv6-port <değer>: UDPv6 DNS isteklerini belirtilen port numarasına yönlendir (varsayılan 53).
---dns-verb: DNS yönlendirme mesajlarını ayrıntılı olarak yazdır.
---blacklist <txtfile>: Sadece sağlanan metin dosyasındaki alan adları ve alt alan adlarına karşı hile uygulama (HTTP Host/TLS SNI). Bu seçenek birden fazla kez kullanılabilir.
---allow-no-sni: TLS SNI tespit edilemediğinde --blacklist etkinleştirilmişse yine de hile uygulama.
---frag-by-sni: TLS paketinde SNI tespit edilirse, paketi SNI değerinden önce parçalara ayır.
---set-ttl <değer>: Sahte İstek Modunu etkinleştir ve belirtilen TTL değeriyle gönder. DİKKAT! Beklenmedik şekillerde siteleri bozabilir. Dikkatli kullanın (veya --blacklist ile birlikte).
---auto-ttl [a1-a2-m]: Sahte İstek Modunu etkinleştir, TTL'yi otomatik olarak tespit et ve mesafeye göre düşür. Eğer mesafe a2'den kısaysa TTL a2 kadar düşer. Eğer daha uzunsa, (a1; a2) ölçeği kullanılır ve mesafe bir ağırlık olarak hesaplanır. Eğer çıkan TTL m’den fazla ise, m olarak ayarlanır. Varsayılan: --auto-ttl 1-4-10. Ayrıca --min-ttl 3 olarak ayarlanır. DİKKAT! Beklenmedik şekillerde siteleri bozabilir. Dikkatli kullanın (veya --blacklist ile birlikte).
---min-ttl <değer>: Fake Request Modu'nda, TTL mesafesinin minimum değeri (128/64 - TTL) için kullanılacak değeri belirler.
---wrong-chksum: Sahte İstek Modunu etkinleştir ve yanlış TCP kontrol toplamıyla gönder. VM veya bazı yönlendiricilerle çalışmayabilir, ancak --set-ttl'den daha güvenlidir.
---wrong-seq: Sahte İstek Modunu etkinleştir ve geçmişteki TCP SEQ/ACK ile gönder.
---native-frag: Paketleri daha küçük parçalara ayırarak, pencere boyutunu küçültmeden paketleri parçala. Daha hızlı çalışır (bağlantıyı yavaşlatmaz) ve daha verimlidir.
---reverse-frag: Paketleri --native-frag gibi parçala ancak ters sırayla gönder. HTTPS TLS ClientHello'yu segmentlere ayırmada sorun yaşayan sitelerle çalışır.
---fake-from-hex <değer>: Sahte paketleri HEX değerlerinden yükleyerek Fake Request Modu için gönder (örneğin 1234abcDEF). Bu seçenek birden fazla kez kullanılabilir, bu durumda her sahte paket komut satırındaki sırayla gönderilecektir.
---fake-with-sni <değer>: Fake Request Modu için belirtilen SNI domain adıyla sahte paketler oluştur. Paketler, Mozilla Firefox 130 TLS ClientHello paketini taklit eder (rastgele oluşturulmuş sahte SessionID, anahtar paylaşımları ve ECH grease ile). Birden fazla kez kullanılabilir.
---fake-gen <değer>: Sahte Request Modu için rastgele doldurulmuş sahte paketler oluştur, değerini belirle (maksimum 30).
---fake-resend <değer>: Her sahte paketi belirtilen sayıda tekrar gönder. Varsayılan: 1 (her paketi bir kez gönder).
---max-payload [değer]: TCP yük verisi [değer] den fazla olan paketler işlenmez. Bu seçenek, büyük miktarda veriyi atlayarak işlemci kullanımını azaltmak için kullanılabilir (örneğin, dosya transferleri). Varsayılan: --max-payload 1200.
+-p → Pasif DPI'yi engelle.
+-q → QUIC/HTTP3'ü engelle.
+-r → Host başlığını "hoSt" olarak değiştir.
+-s → Host başlığı ile değeri arasındaki boşluğu kaldır.
+-m → Host başlığının yazımını karıştır (örneğin: test.com -> tEsT.cOm).
+-f <değer> → HTTP parçalama değerini belirle.
+-k <değer> → HTTP sürekli bağlantı (keep-alive) parçalanmasını etkinleştir ve değeri belirle.
+-n → -k etkinleştirildiğinde ilk segmentin ACK'sini bekleme.
+-e <değer> → HTTPS parçalama değerini belirle.
+-a → Method ile Request-URI arasına ek boşluk ekle (bu -s'yi etkinleştirir, bazı siteleri bozabilir).
+-w → İşlenen tüm portlarda HTTP trafiğini bulmaya ve analiz etmeye çalış (sadece port 80'de değil).
+--port <değer> → Parçalama işlemi yapmak için ek bir TCP portu belirle (ve -w ile HTTP hilelerini uygula).
+--ip-id <değer> → Ek IP ID’sini işle (onaltılık, bu ID ile yönlendirmeleri ve TCP RST’leri engelle). Bu seçenek birden fazla kez kullanılabilir.
+--dns-addr <değer> → UDP DNS isteklerini belirtilen IP adresine yönlendir (deneysel).
+--dns-port <değer> → UDP DNS isteklerini belirtilen port numarasına yönlendir (varsayılan 53).
+--dnsv6-addr <değer> → UDPv6 DNS isteklerini belirtilen IPv6 adresine yönlendir (deneysel).
+--dnsv6-port <değer> → UDPv6 DNS isteklerini belirtilen port numarasına yönlendir (varsayılan 53).
+--dns-verb → DNS yönlendirme mesajlarını ayrıntılı olarak yazdır.
+--blacklist <txtfile> → Sadece sağlanan metin dosyasındaki alan adları ve alt alan adlarına karşı hile uygulama (HTTP Host/TLS SNI). Bu seçenek birden fazla kez kullanılabilir.
+--allow-no-sni → TLS SNI tespit edilemediğinde --blacklist etkinleştirilmişse yine de hile uygulama.
+--frag-by-sni → TLS paketinde SNI tespit edilirse, paketi SNI değerinden önce parçalara ayır.
+--set-ttl <değer> → Sahte İstek Modunu etkinleştir ve belirtilen TTL değeriyle gönder. DİKKAT! Beklenmedik şekillerde siteleri bozabilir. Dikkatli kullanın (veya --blacklist ile birlikte).
+--auto-ttl [a1-a2-m] → Sahte İstek Modunu etkinleştir, TTL'yi otomatik olarak tespit et ve mesafeye göre düşür. Eğer mesafe a2'den kısaysa TTL a2 kadar düşer. Eğer daha uzunsa, (a1; a2) ölçeği kullanılır ve mesafe bir ağırlık olarak hesaplanır. Eğer çıkan TTL m’den fazla ise, m olarak ayarlanır. Varsayılan: --auto-ttl 1-4-10. Ayrıca --min-ttl 3 olarak ayarlanır. DİKKAT! Beklenmedik şekillerde siteleri bozabilir. Dikkatli kullanın (veya --blacklist ile birlikte).
+--min-ttl <değer> → Sahte İstek Modunda, TTL mesafesinin minimum değeri (128/64 - TTL) için kullanılacak değeri belirler.
+--wrong-chksum → Sahte İstek Modunu etkinleştir ve yanlış TCP kontrol toplamıyla gönder. VM veya bazı yönlendiricilerle çalışmayabilir, ancak --set-ttl'den daha güvenlidir.
+--wrong-seq → Sahte İstek Modunu etkinleştir ve geçmişteki TCP SEQ/ACK ile gönder.
+--native-frag → Paketleri daha küçük parçalara ayırarak, pencere boyutunu küçültmeden paketleri parçala. Daha hızlı çalışır (bağlantıyı yavaşlatmaz) ve daha verimlidir.
+--reverse-frag → Paketleri --native-frag gibi parçala ancak ters sırayla gönder. HTTPS TLS ClientHello'yu segmentlere ayırmada sorun yaşayan sitelerle çalışır.
+--fake-from-hex <değer> → Sahte paketleri HEX değerlerinden yükleyerek Fake Request Modu için gönder (örneğin 1234abcDEF). Bu seçenek birden fazla kez kullanılabilir, bu durumda her sahte paket komut satırındaki sırayla gönderilecektir.
+--fake-with-sni <değer> → Sahte İstek Modu için belirtilen SNI domain adıyla sahte paketler oluştur. Paketler, Mozilla Firefox 130 TLS ClientHello paketini taklit eder (rastgele oluşturulmuş sahte SessionID, anahtar paylaşımları ve ECH grease ile). Birden fazla kez kullanılabilir.
+--fake-gen <değer> → Sahte İstek Modu için rastgele doldurulmuş sahte paketler oluştur, değerini belirle (maksimum 30).
+--fake-resend <değer> → Her sahte paketi belirtilen sayıda tekrar gönder. Varsayılan: 1 (her paketi bir kez gönder).
+--max-payload [değer] → TCP yük verisi [değer] den fazla olan paketler işlenmez. Bu seçenek, büyük miktarda veriyi atlayarak işlemci kullanımını azaltmak için kullanılabilir (örneğin, dosya transferleri). Varsayılan: --max-payload 1200.
+
 Eski Modlar:
+-1 → -p -r -s -f 2 -k 2 -n -e 2 (en uyumlu mod)
+-2 → -p -r -s -f 2 -k 2 -n -e 40 (HTTPS için daha iyi hız ama hala uyumlu)
+-3 → -p -r -s -e 40 (HTTP ve HTTPS için daha iyi hız)
+-4 → -p -r -s (en iyi hız)
 
--1: -p -r -s -f 2 -k 2 -n -e 2 (en uyumlu mod)
--2: -p -r -s -f 2 -k 2 -n -e 40 (HTTPS için daha iyi hız ama hala uyumlu)
--3: -p -r -s -e 40 (HTTP ve HTTPS için daha iyi hız)
--4: -p -r -s (en iyi hız)
 Modern Modlar (daha stabil, daha uyumlu, daha hızlı):
-
--5: -f 2 -e 2 --auto-ttl --reverse-frag --max-payload
--6: -f 2 -e 2 --wrong-seq --reverse-frag --max-payload
--7: -f 2 -e 2 --wrong-chksum --reverse-frag --max-payload
--8: -f 2 -e 2 --wrong-seq --wrong-chksum --reverse-frag --max-payload
--9: -f 2 -e 2 --wrong-seq --wrong-chksum --reverse-frag --max-payload -q (varsayılan mod)
+-5 → -f 2 -e 2 --auto-ttl --reverse-frag --max-payload
+-6 → -f 2 -e 2 --wrong-seq --reverse-frag --max-payload
+-7 → -f 2 -e 2 --wrong-chksum --reverse-frag --max-payload
+-8 → -f 2 -e 2 --wrong-seq --wrong-chksum --reverse-frag --max-payload
+-9 → -f 2 -e 2 --wrong-seq --wrong-chksum --reverse-frag --max-payload -q (varsayılan mod)
 
 Not: Bu argümanlar, çeşitli internet trafiği manipülasyonları ve güvenlik ayarları yaparak, kullanıcıların sansürü aşmalarını ve internet trafiği üzerinde daha fazla kontrol sahibi olmalarını sağlar. **--wrong-seq** ve **--wrong-chksum** kombinasyonu iki farklı sahte paket üretir.
 ```
@@ -91,11 +91,11 @@ Not: Bu argümanlar, çeşitli internet trafiği manipülasyonları ve güvenlik
 * **Google Chrome**: [Ayarlar](chrome://settings/) → [Gizlilik ve güvenlik](chrome://settings/privacy) → [Güvenlik](chrome://settings/security) → Güvenli DNS kullan → DNS sağlayıcısı seç: CloudFlare
 * **Mozilla Firefox**: [Ayarlar](about:preferences) → Ağ Ayarları → HTTPS üzerinde DNS'yi etkinleştir → DNS sağlayıcısı seç: CloudFlare
 
-Then run the `goodbyedpi.exe` executable without any options. If it works — congratulations! You can use it as-is or configure further, for example by using `--blacklist` option if the list of blocked websites is known and available for your country.
+Daha sonra Türkiye ve diğer Ülkeler için **08 - DNS Yönlendirmesiz v1.cmd** veya Rusya için **08 - DNS Yönlendirmesiz v2.cmd** dosyasını herhangi bir argüman olmadan çalıştırın. Eğer çalışırsa — tebrikler! Olduğu gibi kullanabilir veya örneğin ülkeniz için engellenen web sitelerinin listesi biliniyorsa ve kullanılabilirse `--blacklist` argümanını kullanarak daha fazla yapılandırabilirsiniz.
 
-If your provider intercepts DNS requests, you may want to use `--dns-addr` option to a public DNS resolver running on non-standard port (such as Yandex DNS `77.88.8.8:1253`) or configure DNS over HTTPS/TLS using third-party applications.
+Sağlayıcınız DNS isteklerini engelliyorsa, standart olmayan bir portta (örneğin Yandex DNS `77.88.8.8:1253`) çalışan genel bir DNS çözücüsüne `--dns-addr` seçeneğini kullanmak veya üçüncü taraf uygulamaları kullanarak HTTPS/TLS üzerinden DNS yapılandırmak isteyebilirsiniz.
 
-Check the .cmd scripts and modify it according to your preference and network conditions.
+.cmd betiklerini kontrol edin ve tercihinize ve ağ koşullarınıza göre değiştirin.
 
 # How does it work
 
