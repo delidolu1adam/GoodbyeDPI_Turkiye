@@ -1,9 +1,9 @@
+GoodbyeDPI Türkiye — Derin Paket İncelemesi Atlatma Aracı
+=========================
 Bu proje Türkiye'de kalıcı olarak engellenmiş **Discord** ve bazı durumlarda engellenen **Instagram**, **Youtube** vb. web sitesi ve uygulamalara VPN kullanmadan ve İnternet hızında bir değişiklik olmadan giriş yapmanızı sağlamak için GoodByeDPI'ın orjinal reposundan çatallanmış ve düzenlenmiş bir sürümüdür.
 
 Daha fazla bilgi edinmek isterseniz indirdiğiniz **GoodBye DPI Türkiye v0.2.3rc3/assets/documents** klasör içeriğindeki **_Turkish** etiketli dosyalara göz atın.
 
-GoodbyeDPI — Derin Paket İncelemesi Atlatma Aracı
-=========================
 Bu yazılım, birçok İnternet Servis Sağlayıcısında bulunan ve belirli web sitelerine erişimi engelleyen **Derin Paket İnceleme Sistemleri**ni atlatmak için tasarlanmıştır.
 
 Optik ayırıcı veya port yansıtma (**Pasif DPI**) kullanılarak bağlanan ve herhangi bir veriyi engellemeyen ancak istenen hedeften daha hızlı yanıt veren DPI'ları ve sırayla bağlanan **Aktif DPI**'ları işler.
@@ -150,7 +150,7 @@ Program, filtreleri ayarlamak ve paketleri kullanıcı alanına yönlendirmek i�
 
 # Kaynaktan Nasıl İnşa Edilir?
 
-This project can be build using **GNU Make** and [**mingw**](https://mingw-w64.org). The only dependency is [WinDivert](https://github.com/basil00/Divert).
+Bu proje **GNU Make** ve [**mingw**](https://mingw-w64.org) kullanılarak derlenebilir. Tek bağımlığı [WinDivert](https://github.com/basil00/Divert)'tir.
 
 x86 exe'yi derlemek için şunu çalıştırın:
 
