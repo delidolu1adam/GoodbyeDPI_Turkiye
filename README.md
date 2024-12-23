@@ -35,54 +35,52 @@ Download [latest version from Releases page](https://github.com/ValdikSS/Goodbye
 ## Desteklenen Argümanlar
 Programınızın sürümü hakkında tüm bilgileri öğrenmek için başlangıçta -h (--help) argümanını kullanın.
 ```
-Örnek Kullanımı: goodbyedpi.exe -5 veya goodbyedpi.exe -5 --dns-addr 1.1.1.1 --dns-port 53 --dnsv6-addr 2606:4700:4700::1111 --dnsv6-port 53
+Örnek Kullanım: goodbyedpi.exe -5 **veya** goodbyedpi.exe -5 --dns-addr 1.1.1.1 --dns-port 53 --dnsv6-addr 2606:4700:4700::1111 --dnsv6-port 53
 
--p → Pasif DPI'yi engelle.
--q → QUIC/HTTP3'ü engelle.
--r → Host başlığını "hoSt" olarak değiştir.
--s → Host başlığı ile değeri arasındaki boşluğu kaldır.
--m → Host başlığının yazımını karıştır (örneğin: test.com -> tEsT.cOm).
--f <değer> → HTTP parçalama değerini belirle.
--k <değer> → HTTP sürekli bağlantı (keep-alive) parçalanmasını etkinleştir ve değeri belirle.
--n → -k etkinleştirildiğinde ilk segmentin ACK'sini bekleme.
--e <değer> → HTTPS parçalama değerini belirle.
--a → Method ile Request-URI arasına ek boşluk ekle (bu -s'yi etkinleştirir, bazı siteleri bozabilir).
--w → İşlenen tüm portlarda HTTP trafiğini bulmaya ve analiz etmeye çalış (sadece port 80'de değil).
---port <değer> → Parçalama işlemi yapmak için ek bir TCP portu belirle (ve -w ile HTTP hilelerini uygula).
---ip-id <değer> → Ek IP ID’sini işle (onaltılık, bu ID ile yönlendirmeleri ve TCP RST’leri engelle). Bu seçenek birden fazla kez kullanılabilir.
---dns-addr <değer> → UDP DNS isteklerini belirtilen IP adresine yönlendir (deneysel).
---dns-port <değer> → UDP DNS isteklerini belirtilen port numarasına yönlendir (varsayılan 53).
---dnsv6-addr <değer> → UDPv6 DNS isteklerini belirtilen IPv6 adresine yönlendir (deneysel).
---dnsv6-port <değer> → UDPv6 DNS isteklerini belirtilen port numarasına yönlendir (varsayılan 53).
---dns-verb → DNS yönlendirme mesajlarını ayrıntılı olarak yazdır.
---blacklist <txtfile> → Sadece sağlanan metin dosyasındaki alan adları ve alt alan adlarına karşı hile uygulama (HTTP Host/TLS SNI). Bu seçenek birden fazla kez kullanılabilir.
---allow-no-sni → TLS SNI tespit edilemediğinde --blacklist etkinleştirilmişse yine de hile uygulama.
---frag-by-sni → TLS paketinde SNI tespit edilirse, paketi SNI değerinden önce parçalara ayır.
---set-ttl <değer> → Sahte İstek Modunu etkinleştir ve belirtilen TTL değeriyle gönder. DİKKAT! Beklenmedik şekillerde siteleri bozabilir. Dikkatli kullanın (veya --blacklist ile birlikte).
---auto-ttl [a1-a2-m] → Sahte İstek Modunu etkinleştir, TTL'yi otomatik olarak tespit et ve mesafeye göre düşür. Eğer mesafe a2'den kısaysa TTL a2 kadar düşer. Eğer daha uzunsa, (a1; a2) ölçeği kullanılır ve mesafe bir ağırlık olarak hesaplanır. Eğer çıkan TTL m’den fazla ise, m olarak ayarlanır. Varsayılan: --auto-ttl 1-4-10. Ayrıca --min-ttl 3 olarak ayarlanır. DİKKAT! Beklenmedik şekillerde siteleri bozabilir. Dikkatli kullanın (veya --blacklist ile birlikte).
---min-ttl <değer> → Sahte İstek Modunda, TTL mesafesinin minimum değeri (128/64 - TTL) için kullanılacak değeri belirler.
---wrong-chksum → Sahte İstek Modunu etkinleştir ve yanlış TCP kontrol toplamıyla gönder. VM veya bazı yönlendiricilerle çalışmayabilir, ancak --set-ttl'den daha güvenlidir.
---wrong-seq → Sahte İstek Modunu etkinleştir ve geçmişteki TCP SEQ/ACK ile gönder.
---native-frag → Paketleri daha küçük parçalara ayırarak, pencere boyutunu küçültmeden paketleri parçala. Daha hızlı çalışır (bağlantıyı yavaşlatmaz) ve daha verimlidir.
---reverse-frag → Paketleri --native-frag gibi parçala ancak ters sırayla gönder. HTTPS TLS ClientHello'yu segmentlere ayırmada sorun yaşayan sitelerle çalışır.
---fake-from-hex <değer> → Sahte paketleri HEX değerlerinden yükleyerek Fake Request Modu için gönder (örneğin 1234abcDEF). Bu seçenek birden fazla kez kullanılabilir, bu durumda her sahte paket komut satırındaki sırayla gönderilecektir.
---fake-with-sni <değer> → Sahte İstek Modu için belirtilen SNI domain adıyla sahte paketler oluştur. Paketler, Mozilla Firefox 130 TLS ClientHello paketini taklit eder (rastgele oluşturulmuş sahte SessionID, anahtar paylaşımları ve ECH grease ile). Birden fazla kez kullanılabilir.
---fake-gen <değer> → Sahte İstek Modu için rastgele doldurulmuş sahte paketler oluştur, değerini belirle (maksimum 30).
---fake-resend <değer> → Her sahte paketi belirtilen sayıda tekrar gönder. Varsayılan: 1 (her paketi bir kez gönder).
---max-payload [değer] → TCP yük verisi [değer] den fazla olan paketler işlenmez. Bu seçenek, büyük miktarda veriyi atlayarak işlemci kullanımını azaltmak için kullanılabilir (örneğin, dosya transferleri). Varsayılan: --max-payload 1200.
-
-Eski Modlar:
--1 → -p -r -s -f 2 -k 2 -n -e 2 (en uyumlu mod)
--2 → -p -r -s -f 2 -k 2 -n -e 40 (HTTPS için daha iyi hız ama hala uyumlu)
--3 → -p -r -s -e 40 (HTTP ve HTTPS için daha iyi hız)
--4 → -p -r -s (en iyi hız)
-
-Modern Modlar (daha stabil, daha uyumlu, daha hızlı):
--5 → -f 2 -e 2 --auto-ttl --reverse-frag --max-payload
--6 → -f 2 -e 2 --wrong-seq --reverse-frag --max-payload
--7 → -f 2 -e 2 --wrong-chksum --reverse-frag --max-payload
--8 → -f 2 -e 2 --wrong-seq --wrong-chksum --reverse-frag --max-payload
--9 → -f 2 -e 2 --wrong-seq --wrong-chksum --reverse-frag --max-payload -q (varsayılan mod)
+-p: Pasif DPI'yi engelle
+-q: QUIC/HTTP3'ü engelle
+-r: Host başlığını "hoSt" olarak değiştir
+-s: Host başlığı ile değeri arasındaki boşluğu kaldır
+-m: Host başlığındaki harfleri karıştır (test.com -> tEsT.cOm)
+-f <değer>: HTTP parçalama (fragmentation) değerini ayarla
+-k <değer>: HTTP kalıcı (keep-alive) bağlantı parçalamayı etkinleştir ve değeri ayarla
+-n: -k etkinleştirildiğinde ilk segmentin ACK'ını bekleme
+-e <değer>: HTTPS parçalama değerini ayarla
+-a: Yöntem (Method) ile İstek URI'sı (Request-URI) arasında ekstra boşluk (bu, -s'yi etkinleştirir ve bazı siteleri bozabilir)
+-w: İşlenen tüm portlarda HTTP trafiğini bulmayı ve çözümlemeyi dene (yalnızca port 80'de değil)
+--port <değer>: Parçalama yapacak ek bir TCP portu (ve -w ile HTTP hileleri)
+--ip-id <değer>: Ekstra bir IP kimliğini (decimal) yönet, bu kimlik ile yönlendirmeleri ve TCP RST'leri engelle. Bu seçenek birden fazla kez kullanılabilir.
+--dns-addr <değer>: UDP DNS isteklerini sağlanan IP adresine yönlendir (deneysel)
+--dns-port <değer>: UDP DNS isteklerini sağlanan porta yönlendir (varsayılan 53)
+--dnsv6-addr <değer>: UDPv6 DNS isteklerini sağlanan IPv6 adresine yönlendir (deneysel)
+--dnsv6-port <değer>: UDPv6 DNS isteklerini sağlanan porta yönlendir (varsayılan 53)
+--dns-verb: Ayrıntılı DNS yönlendirme mesajları yazdır
+--blacklist <txtfile>: Yalnızca verilen metin dosyasındaki host adları ve alt alan adları için engelleme hilelerini uygula (HTTP Host/TLS SNI). Bu seçenek birden fazla kez verilebilir.
+--allow-no-sni: TLS SNI tespit edilemezse, --blacklist etkinleştirildiğinde engelleme işlemini uygula.
+--frag-by-sni: Eğer TLS paketinde SNI tespit edilirse, paketi SNI değeri öncesinde parçala.
+--set-ttl <değer>: Sahte İstek Modunu etkinleştir ve sağlanan TTL değeri ile gönder. DİKKATLİ KULLANIN! Web sitelerini beklenmedik şekillerde bozabilir. Dikkatli kullanın (veya --blacklist ile).
+--auto-ttl [a1-a2-m]: Sahte İstek Modunu etkinleştir, TTL'yi otomatik olarak tespit et ve mesafeye göre azalt. Eğer mesafe a2'den kısa ise TTL a2 kadar azalır. Daha uzunsa, (a1; a2) ölçeği kullanılarak mesafe ağırlık olarak kabul edilir. Eğer sonuç TTL m’den büyükse, TTL'yi m olarak ayarla. Varsayılan: --auto-ttl 1-4-10. Ayrıca --min-ttl 3'ü ayarlar. DİKKATLİ KULLANIN! Web sitelerini beklenmedik şekilde bozabilir. Dikkatli kullanın (veya --blacklist ile).
+--min-ttl <değer>: Sahte İstek Modunda --set-ttl ve --auto-ttl modlarında gönderilecek Sahte İstek için minimum TTL mesafesi (128/64 - TTL).
+--wrong-chksum: Sahte İstek Modunu etkinleştir ve yanlış TCP checksum ile gönder. Sanal makinelerde veya bazı yönlendiricilerle çalışmayabilir, ancak set-ttl’den daha güvenlidir.
+--wrong-seq: Sahte İstek Modunu etkinleştir ve TCP SEQ/ACK geçmişteki bir değeriyle gönder.
+--native-frag: Paketleri daha küçük parçalara ayırarak, pencere boyutunu küçültmeden gönder. Daha hızlı çalışır (bağlantıyı yavaşlatmaz) ve daha iyi sonuç verir.
+--reverse-frag: --native-frag gibi paketleri parçalara ayır, ancak ters sırayla gönder. HTTPS TLS ClientHello segmentlerini işleyemeyen web siteleriyle çalışır (çünkü TCP akışını "birleştirilmiş" alırlar).
+--fake-from-hex <değer>: Sahte İstek Modunda HEX değerlerinden (örneğin, 1234abcDEF) sahte paketler yükle. Bu seçenek birden fazla kez verilebilir, bu durumda her sahte paket komut satırı argüman sırasına göre her istekte gönderilir.
+--fake-with-sni <değer>: Sahte İstek Modunda verilen SNI alan adı ile sahte paketler üret. Bu paketler Mozilla Firefox 130 TLS ClientHello paketini taklit eder (rastgele üretilmiş sahte SessionID, anahtar paylaşımları ve ECH grease ile).
+--fake-gen <değer>: Sahte İstek Modu için rastgele doldurulmuş sahte paketler üret, değer kadar (30'a kadar).
+--fake-resend <değer>: Her sahte paketi belirtilen sayı kadar yeniden gönder. Varsayılan: 1 (her paketi bir kez gönder).
+--max-payload [değer]: TCP yük verisi [değer]’den büyük olan paketler işlenmeyecektir. Bu seçenek, zaten kurulmuş oturumlarda büyük miktarda veriyi atlayarak CPU kullanımını azaltmak için kullanılabilir. Büyük HTTP isteklerinin işlenmesini engelleyebilir. Varsayılan: --max-payload 1200.
+Eski Mod Ayarları:
+-1: -p -r -s -f 2 -k 2 -n -e 2 (en uyumlu mod)
+-2: -p -r -s -f 2 -k 2 -n -e 40 (HTTPS için daha iyi hız, yine de uyumlu)
+-3: -p -r -s -e 40 (HTTP ve HTTPS için daha iyi hız)
+-4: -p -r -s (en iyi hız)
+Modern Mod Ayarları (daha stabil, daha uyumlu, daha hızlı):
+-5: -f 2 -e 2 --auto-ttl --reverse-frag --max-payload
+-6: -f 2 -e 2 --wrong-seq --reverse-frag --max-payload
+-7: -f 2 -e 2 --wrong-chksum --reverse-frag --max-payload
+-8: -f 2 -e 2 --wrong-seq --wrong-chksum --reverse-frag --max-payload
+-9: -f 2 -e 2 --wrong-seq --wrong-chksum --reverse-frag --max-payload -q (varsayılan ayar)
 
 Not: Bu argümanlar, çeşitli internet trafiği manipülasyonları ve güvenlik ayarları yaparak, kullanıcıların sansürü aşmalarını ve internet trafiği üzerinde daha fazla kontrol sahibi olmalarını sağlar. **--wrong-seq** ve **--wrong-chksum** kombinasyonu iki farklı sahte paket üretir.
 ```
