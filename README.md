@@ -150,11 +150,11 @@ Program, filtreleri ayarlamak ve paketleri kullanıcı alanına yönlendirmek i�
 
 This project can be build using **GNU Make** and [**mingw**](https://mingw-w64.org). The only dependency is [WinDivert](https://github.com/basil00/Divert).
 
-To build x86 exe run:
+x86 exe'yi derlemek için şunu çalıştırın:
 
 `make CPREFIX=i686-w64-mingw32- WINDIVERTHEADERS=/path/to/windivert/include WINDIVERTLIBS=/path/to/windivert/x86`
 
-And for x86_64:
+x86_64 exe'yi derlemek için şunu çalıştırın:
 
 `make CPREFIX=x86_64-w64-mingw32- BIT64=1 WINDIVERTHEADERS=/path/to/windivert/include WINDIVERTLIBS=/path/to/windivert/amd64`
 
