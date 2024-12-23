@@ -22,17 +22,17 @@ Kodların ne işe yaradığını ve hangi amaçla yazıldığını öğrenmek i�
 
 # Hızlı Başlangıç
 
-* **Türkiye** için [son sürümler sayfasından](https://github.com/delidolu1adam/GoodbyeDPI_Turkiye/releases) ZIP dosyasını indirin, ZIP dosyasını ayıklayın ve içindeki **01 - CloudFlare DNS Yönlendirmeli.cmd** komut dosyasına sağ tıklayarak **Yönetici Olarak** çalıştırın.
+* **Türkiye** için [son Sürümler](https://github.com/delidolu1adam/GoodbyeDPI_Turkiye/releases) sayfasından ZIP dosyasını indirin, ZIP dosyasını ayıklayın ve içindeki **01 - CloudFlare DNS Yönlendirmeli.cmd** komut dosyasına sağ tıklayarak **Yönetici Olarak** çalıştırın.
 
-* **Rusya** için [son sürümler sayfasından](https://github.com/delidolu1adam/GoodbyeDPI_Turkiye/releases) ZIP dosyasını indirin, ZIP dosyasını ayıklayın ve içindeki **07 - Yandex DNS Yönlendirmeli.cmd** komut dosyasına sağ tıklayarak **Yönetici Olarak** çalıştırın.
+* **Rusya** için [son Sürümler](https://github.com/delidolu1adam/GoodbyeDPI_Turkiye/releases) sayfasından ZIP dosyasını indirin, ZIP dosyasını ayıklayın ve içindeki **07 - Yandex DNS Yönlendirmeli.cmd** komut dosyasına sağ tıklayarak **Yönetici Olarak** çalıştırın.
 
-* **Diğer Ülkeler** için [son sürümler sayfasından](https://github.com/delidolu1adam/GoodbyeDPI_Turkiye/releases) ZIP dosyasını indirin, ZIP dosyasını ayıklayın ve içindeki **01 - CloudFlare DNS Yönlendirmeli.cmd** komut dosyasına sağ tıklayarak **Yönetici Olarak** çalıştırın.
+* **Diğer Ülkeler** için [son Sürümler](https://github.com/delidolu1adam/GoodbyeDPI_Turkiye/releases) sayfasından ZIP dosyasını indirin, ZIP dosyasını ayıklayın ve içindeki **01 - CloudFlare DNS Yönlendirmeli.cmd** komut dosyasına sağ tıklayarak **Yönetici Olarak** çalıştırın.
 
 Bu komut dosyaları, GoodbyeDPI'ı önerilen modda başlatır ve DNS çözücü yönlendirmesini çalıştırdığınız komut dosyasına göre CloudFlare, Google, Quad9, OpenDNS, AdGuard, Yandex ve Comodo DNS adreslerine (DNS zehirlenmesini engellemek için) standart olmayan bir port üzerinden yapar. Eğer çalıştıysa — tebrikler! Şu anda olduğu gibi kullanabilirsiniz veya daha fazla yapılandırma yapabilirsiniz.
 
 # Nasıl Kullanılır?
 
-Download [latest version from Releases page](https://github.com/ValdikSS/GoodbyeDPI/releases) and run.
+[Son Sürümler](https://github.com/ValdikSS/GoodbyeDPI/releases) sayfasından son sürümü indirin ve çalıştırın.
 
 ## Desteklenen Argümanlar
 Programınızın sürümü hakkında tüm bilgileri öğrenmek için başlangıçta -h (--help) argümanını kullanın.
