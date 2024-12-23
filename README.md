@@ -1,4 +1,6 @@
-GoodbyeDPI — Deep Packet Inspection circumvention utility
+Bu proje Türkiye'de kalıcı olarak engellenmiş **Discord** ve belli sürelerde engellenen **Instagram**, **Youtube** vb. web sitesi ve uygulamalara VPN kullanmadan ve İnternet hızında bir değişiklik olmadan giriş yapmanızı sağlamak için GoodByeDPI'ın düzenlenmiş bir sürümüdür.
+
+GoodbyeDPI — Derin Paket İncelemesi Atlatma Aracı
 =========================
 
 This software designed to bypass Deep Packet Inspection systems found in many Internet Service Providers which block access to certain websites.
