@@ -160,20 +160,18 @@ And for x86_64:
 
 # Windows Hizmeti Olarak Nasıl Kurulur?
 
-Bunun için `11 - Windows Hizmeti Olarak Kur - DNS Yönlendirmeli v1.cmd`, `12 - Windows Hizmeti Olarak Kur - DNS Yönlendirmeli v2.cmd`, `13 - Windows Hizmeti Olarak Kur - DNS Yönlendirmeli v3.cmd`, `14 - Windows Hizmeti Olarak Kur - DNS Yönlendirmeli v4.cmd`, `15 - Windows Hizmeti Olarak Kur - DNS Yönlendirmesiz Karaliste.cmd`, `16 - Windows Hizmeti Olarak Kur - DNS Yönlendirmeli Karaliste.cmd` ve `17 - Hizmetleri Durdur ve Kaldır.cmd` komut dosyalarındaki yapılandırma örneklerini kontrol edin.
+Bunun için `11 - Windows Hizmeti Olarak Kur - DNS Yönlendirmeli v1.cmd`, `12 - Windows Hizmeti Olarak Kur - DNS Yönlendirmeli v2.cmd`, `13 - Windows Hizmeti Olarak Kur - DNS Yönlendirmeli v3.cmd`, `14 - Windows Hizmeti Olarak Kur - DNS Yönlendirmeli v4.cmd`, `15 - Windows Hizmeti Olarak Kur - DNS Yönlendirmesiz Karaliste.cmd`, `16 - Windows Hizmeti Olarak Kur - DNS Yönlendirmeli Karaliste.cmd` ve `17 - Hizmetleri Durdur ve Kaldır.cmd` komut dosyalarındaki yapılandırma örneklerini kontrol edin. Bunları kendi ihtiyaçlarınıza göre değiştirin.
 
-Bunları kendi ihtiyaçlarınıza göre değiştirin.
+# Bilinen Sorunlar
 
-# Known issues
-
-* Horribly outdated Windows 7 installations are not able to load WinDivert driver due to missing support for SHA256 digital signatures. Install KB3033929 [x86](https://www.microsoft.com/en-us/download/details.aspx?id=46078)/[x64](https://www.microsoft.com/en-us/download/details.aspx?id=46148), or better, update the whole system using Windows Update.
-* Intel/Qualcomm Killer network cards: `Advanced Stream Detect` in Killer Control Center is incompatible with GoodbyeDPI, [disable it](https://github.com/ValdikSS/GoodbyeDPI/issues/541#issuecomment-2296038239).
-* QUIK trading software [may interfere with GoodbyeDPI](https://github.com/ValdikSS/GoodbyeDPI/issues/677#issuecomment-2390595606). First start QUIK, then GoodbyeDPI.
-* ~~Some SSL/TLS stacks unable to process fragmented ClientHello packets, and HTTPS websites won't open. Bug: [#4](https://github.com/ValdikSS/GoodbyeDPI/issues/4), [#64](https://github.com/ValdikSS/GoodbyeDPI/issues/64).~~ Fragmentation issues are fixed in v0.1.7.
-* ~~ESET Antivirus is incompatible with WinDivert driver [#91](https://github.com/ValdikSS/GoodbyeDPI/issues/91). This is most probably antivirus bug, not WinDivert.~~
+* Korkunç derecede eski Windows 7 kurulumları, SHA256 dijital imzalarına yönelik desteğin olmaması nedeniyle WinDivert sürücüsünü yükleyemiyor. KB3033929 [x86](https://www.microsoft.com/en-us/download/details.aspx?id=46078)/[x64](https://www.microsoft.com/en-us/download/details.aspx?id=46148) güncelleme paketini yükleyin veya daha iyi seçenek olan Windows Güncelleme'yi kullanarak tüm sisteminizi en yeni sürüme güncelleyin.
+* Intel/Qualcomm Killer ağ kartları: Killer Control Center'daki Advanced Stream Detect, GoodbyeDPI ile uyumlu değil, [devre dışı bırakın](https://github.com/ValdikSS/GoodbyeDPI/issues/541#issuecomment-2296038239).
+* QUIK ticaret yazılımı [GoodbyeDPI ile çakışabilir](https://github.com/ValdikSS/GoodbyeDPI/issues/677#issuecomment-2390595606). Çözüm için önce QUIK'i daha sonra GoodbyeDPI'ı başlatın.
+* ~~Bazı SSL/TLS yığınları parçalanmış ClientHello paketlerini işleyemiyor ve HTTPS web siteleri açılmıyor. Hata: [#4](https://github.com/ValdikSS/GoodbyeDPI/issues/4), [#64](https://github.com/ValdikSS/GoodbyeDPI/issues/64).~~ Parçalanma sorunları v0.1.7'de düzeltildi.
+* ~~ESET Antivirus, WinDivert sürücüsüyle uyumsuzdur [#91](https://github.com/ValdikSS/GoodbyeDPI/issues/91). Bu büyük ihtimalle WinDivert değil, antivirüs hatasıdır.~~
 
 
-# Similar projects
+# Benzer Projeler
 
 - **[zapret](https://github.com/bol-van/zapret)** by @bol-van (for MacOS, Linux and Windows)
 - **[Green Tunnel](https://github.com/SadeghHayeri/GreenTunnel)** by @SadeghHayeri (for MacOS, Linux and Windows)
@@ -187,8 +185,8 @@ Bunları kendi ihtiyaçlarınıza göre değiştirin.
 - **[ByeDPI](https://github.com/hufrea/byedpi)** for Linux/Windows + **[ByeDPIAndroid](https://github.com/dovecoteescapee/ByeDPIAndroid/)** for Android (no root)
 - **[youtubeUnblock](https://github.com/Waujito/youtubeUnblock/)** by @Waujito (for OpenWRT/Entware routers and Linux)
 
-# Kudos
+# Özel Teşekkür
 
-Thanks @basil00 for [WinDivert](https://github.com/basil00/Divert). That's the main part of this program.
+[WinDivert](https://github.com/basil00/Divert) için @basil00'a teşekkürler.
 
-Thanks for every [BlockCheck](https://github.com/ValdikSS/blockcheck) contributor. It would be impossible to understand DPI behaviour without this utility.
+Her [BlockCheck](https://github.com/ValdikSS/blockcheck) katılımcısına teşekkürler.
