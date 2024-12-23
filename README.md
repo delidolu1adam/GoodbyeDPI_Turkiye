@@ -1,105 +1,83 @@
-Bu proje Türkiye'de kalıcı olarak engellenmiş **Discord** ve belli sürelerde engellenen **Instagram**, **Youtube** vb. web sitesi ve uygulamalara VPN kullanmadan ve İnternet hızında bir değişiklik olmadan giriş yapmanızı sağlamak için GoodByeDPI'ın düzenlenmiş bir sürümüdür.
+Bu proje Türkiye'de kalıcı olarak engellenmiş **Discord** ve bazı durumlarda engellenen **Instagram**, **Youtube** vb. web sitesi ve uygulamalara VPN kullanmadan ve İnternet hızında bir değişiklik olmadan giriş yapmanızı sağlamak için GoodByeDPI'ın orjinal reposundan çatallanmış ve düzenlenmiş bir sürümüdür.
 
 GoodbyeDPI — Derin Paket İncelemesi Atlatma Aracı
 =========================
+Bu yazılım, birçok İnternet Servis Sağlayıcısında bulunan ve belirli web sitelerine erişimi engelleyen **Derin Paket İnceleme Sistemleri**ni atlatmak için tasarlanmıştır.
 
-This software designed to bypass Deep Packet Inspection systems found in many Internet Service Providers which block access to certain websites.
+Optik ayırıcı veya port yansıtma (**Pasif DPI**) kullanılarak bağlanan ve herhangi bir veriyi engellemeyen ancak istenen hedeften daha hızlı yanıt veren DPI'ları ve sırayla bağlanan **Aktif DPI**'ları işler.
 
-It handles DPI connected using optical splitter or port mirroring (**Passive DPI**) which do not block any data but just replying faster than requested destination, and **Active DPI** connected in sequence.
+**Windows 7, 8, 8.1, 10 ve 11** işletim sistemlerinde, yapılandırma dosyalarının **Yönetici** olarak çalıştırılması gerekir.
 
-**Windows 7, 8, 8.1, 10 or 11** with administrator privileges required.
+Virüs, Veri Sızıntısı ve Bitcoin Madenciliği
+=========================
+Yazılım açık kaynak kodlu olduğundan tüm kodları gözatıp inceleyebilirsiniz. WinDivert.dll ve WinDivert64.sys dosyaları fonksiyonlarından dolayı bazı antivirüs programlarında virüs olarak algılanabilir. Ancak Bu DLL ve SYS dosyaları da açık kaynak kodludur ve istendiğinde herhangi bir **Not Defteri**, **NotePad++** vb. uygulama ile düzenle diyerek incelenebilir. Dilerseniz indirmiş olduğunuz ZIP dosyasını herhangi  Tamamen temizdir. İstemeyen ve güvenmeyen de kullanmaz kimse kimseyi zorlamıyor, programı kullanmak kullanıcının inisiyatifindedir. Dilerseniz ZIP dosyasını indirmeden dosya bağlantı adresini [buradan](https://www.virustotal.com/gui/home/upload) ya da indirmiş olduğunuz ZIP dosyasını [buradan](https://www.virustotal.com/gui/home/url) taratabilirsiniz. Yazılımı kullanmak ya da kullanmamak tamamen sizin kendi insiyatifinizdedir. Bu dosya virüslü, bilgilerim çalındı vb. yalan yanlış ithamlara kulak asmayın. Teknolojinin geldiği bu noktada yazılım kodlarının ne işe yaradığını ve ne amaçla yazıldığını bile öğrenmek mümkün, hem de tek bir satır kod bilgisi olmadan. Kodların ne işe yaradığını ve hangi amaçla yazıldığını öğrenmek için [buraya](https://chatgpt.com/) tıklayın ardından **Bu kodlarda virüs var mı? Hangi amaçla yazılmış? Ne işe yarıyor? Bilgilerim çalınır mı? Bitcoin madenciği yapıyor mu?** sorununu yazdıktan sonra **SHIFT + ENTER** tuşlarına basarak 2 satır aşağı inin ve ilgili kodu da yapıştırıp gönderin :)
 
-# Quick start
+# Hızlı Başlangıç
 
-* **For Russia**: Download [latest version from Releases page](https://github.com/ValdikSS/GoodbyeDPI/releases), unpack the file and run **1_russia_blacklist_dnsredir.cmd** script.
-* For other countries: Download [latest version from Releases page](https://github.com/ValdikSS/GoodbyeDPI/releases), unpack the file and run **2_any_country_dnsredir.cmd**.
+* **Türkiye** ve **Diğer Ülkeler** için [son sürümler sayfasından](https://github.com/delidolu1adam/GoodbyeDPI_Turkiye/releases) dosyasını indirin, ZIP dosyasını ayıklayın ve içindeki **01 - CloudFlare DNS Yönlendirmeli.cmd** yapılandırma dosyasına sağ tıklayarak **Yönetici Olarak** çalıştırın.
 
-These scripts launch GoodbyeDPI in recommended mode with DNS resolver redirection to Yandex DNS on non-standard port (to prevent DNS poisoning).  
-If it works — congratulations! You can use it as-is or configure further.
+* **Rusya** için [son sürümler sayfasından](https://github.com/delidolu1adam/GoodbyeDPI_Turkiye/releases) dosyasını indirin, ZIP dosyasını ayıklayın ve içindeki **07 - Yandex DNS Yönlendirmeli.cmd** yapılandırma dosyasına sağ tıklayarak **Yönetici Olarak** çalıştırın.
 
-# How to use
+* **Diğer Ülkeler** için [son sürümler sayfasından](https://github.com/delidolu1adam/GoodbyeDPI_Turkiye/releases) dosyasını indirin, ZIP dosyasını ayıklayın ve içindeki **01 - CloudFlare DNS Yönlendirmeli.cmd** yapılandırma dosyasına sağ tıklayarak **Yönetici Olarak** çalıştırın.
+
+Bu yapılandırma dosyaları, GoodbyeDPI'ı önerilen modda başlatır ve DNS çözücü yönlendirmesini çalıştırdığınız yapılandırma dosyasına göre CloudFlare, Google, Quad9, OpenDNS, AdGuard, Yandex ve Comodo DNS adreslerine (DNS zehirlenmesini engellemek için) standart olmayan bir port üzerinden yapar. Eğer çalıştıysa — tebrikler! Şu anda olduğu gibi kullanabilirsiniz veya daha fazla yapılandırma yapabilirsiniz.
+
+# Nasıl Kullanılır?
 
 Download [latest version from Releases page](https://github.com/ValdikSS/GoodbyeDPI/releases) and run.
 
-## Supported arguments
-To get relevant information about your version of the program, use the -h (--help) argument at startup.
+## Desteklenen Argümanlar
+Programınızın sürümü hakkında tüm bilgileri öğrenmek için başlangıçta -h (--help) argümanını kullanın.
 ```
-Usage: goodbyedpi.exe [OPTION...]
- -p          block passive DPI
- -q          block QUIC/HTTP3
- -r          replace Host with hoSt
- -s          remove space between host header and its value
- -m          mix Host header case (test.com -> tEsT.cOm)
- -f <value>  set HTTP fragmentation to value
- -k <value>  enable HTTP persistent (keep-alive) fragmentation and set it to value
- -n          do not wait for first segment ACK when -k is enabled
- -e <value>  set HTTPS fragmentation to value
- -a          additional space between Method and Request-URI (enables -s, may break sites)
- -w          try to find and parse HTTP traffic on all processed ports (not only on port 80)
- --port        <value>    additional TCP port to perform fragmentation on (and HTTP tricks with -w)
- --ip-id       <value>    handle additional IP ID (decimal, drop redirects and TCP RSTs with this ID).
-                          This option can be supplied multiple times.
- --dns-addr    <value>    redirect UDP DNS requests to the supplied IP address (experimental)
- --dns-port    <value>    redirect UDP DNS requests to the supplied port (53 by default)
- --dnsv6-addr  <value>    redirect UDPv6 DNS requests to the supplied IPv6 address (experimental)
- --dnsv6-port  <value>    redirect UDPv6 DNS requests to the supplied port (53 by default)
- --dns-verb               print verbose DNS redirection messages
- --blacklist   <txtfile>  perform circumvention tricks only to host names and subdomains from
-                          supplied text file (HTTP Host/TLS SNI).
-                          This option can be supplied multiple times.
- --allow-no-sni           perform circumvention if TLS SNI can't be detected with --blacklist enabled.
- --frag-by-sni            if SNI is detected in TLS packet, fragment the packet right before SNI value.
- --set-ttl     <value>    activate Fake Request Mode and send it with supplied TTL value.
-                          DANGEROUS! May break websites in unexpected ways. Use with care (or --blacklist).
- --auto-ttl    [a1-a2-m]  activate Fake Request Mode, automatically detect TTL and decrease
-                          it based on a distance. If the distance is shorter than a2, TTL is decreased
-                          by a2. If it's longer, (a1; a2) scale is used with the distance as a weight.
-                          If the resulting TTL is more than m(ax), set it to m.
-                          Default (if set): --auto-ttl 1-4-10. Also sets --min-ttl 3.
-                          DANGEROUS! May break websites in unexpected ways. Use with care (or --blacklist).
- --min-ttl     <value>    minimum TTL distance (128/64 - TTL) for which to send Fake Request
-                          in --set-ttl and --auto-ttl modes.
- --wrong-chksum           activate Fake Request Mode and send it with incorrect TCP checksum.
-                          May not work in a VM or with some routers, but is safer than set-ttl.
- --wrong-seq              activate Fake Request Mode and send it with TCP SEQ/ACK in the past.
- --native-frag            fragment (split) the packets by sending them in smaller packets, without
-                          shrinking the Window Size. Works faster (does not slow down the connection)
-                          and better.
- --reverse-frag           fragment (split) the packets just as --native-frag, but send them in the
-                          reversed order. Works with the websites which could not handle segmented
-                          HTTPS TLS ClientHello (because they receive the TCP flow "combined").
- --fake-from-hex <value>  Load fake packets for Fake Request Mode from HEX values (like 1234abcDEF).
-                          This option can be supplied multiple times, in this case each fake packet
-                          would be sent on every request in the command line argument order.
- --fake-with-sni <value>  Generate fake packets for Fake Request Mode with given SNI domain name.
-                          The packets mimic Mozilla Firefox 130 TLS ClientHello packet
-                          (with random generated fake SessionID, key shares and ECH grease).
-                          Can be supplied multiple times for multiple fake packets.
- --fake-gen <value>       Generate random-filled fake packets for Fake Request Mode, value of them
-                          (up to 30).
- --fake-resend <value>    Send each fake packet value number of times.
-                          Default: 1 (send each packet once).
- --max-payload [value]    packets with TCP payload data more than [value] won't be processed.
-                          Use this option to reduce CPU usage by skipping huge amount of data
-                          (like file transfers) in already established sessions.
-                          May skip some huge HTTP requests from being processed.
-                          Default (if set): --max-payload 1200.
+Kullanımı: goodbyedpi.exe [SEÇENEKLER...]
+-p: Pasif DPI'yi engelle.
+-q: QUIC/HTTP3'ü engelle.
+-r: Host başlığını "hoSt" olarak değiştir.
+-s: Host başlığı ile değeri arasındaki boşluğu kaldır.
+-m: Host başlığının yazımını karıştır (örneğin: test.com -> tEsT.cOm).
+-f <değer>: HTTP parçalama değerini belirle.
+-k <değer>: HTTP sürekli bağlantı (keep-alive) parçalanmasını etkinleştir ve değeri belirle.
+-n: -k etkinleştirildiğinde ilk segmentin ACK'sini bekleme.
+-e <değer>: HTTPS parçalama değerini belirle.
+-a: Method ile Request-URI arasına ek boşluk ekle (bu -s'yi etkinleştirir, bazı siteleri bozabilir).
+-w: İşlenen tüm portlarda HTTP trafiğini bulmaya ve analiz etmeye çalış (sadece port 80'de değil).
+--port <değer>: Parçalama işlemi yapmak için ek bir TCP portu belirle (ve -w ile HTTP hilelerini uygula).
+--ip-id <değer>: Ek IP ID’sini işle (onaltılık, bu ID ile yönlendirmeleri ve TCP RST’leri engelle). Bu seçenek birden fazla kez kullanılabilir.
+--dns-addr <değer>: UDP DNS isteklerini belirtilen IP adresine yönlendir (deneysel).
+--dns-port <değer>: UDP DNS isteklerini belirtilen port numarasına yönlendir (varsayılan 53).
+--dnsv6-addr <değer>: UDPv6 DNS isteklerini belirtilen IPv6 adresine yönlendir (deneysel).
+--dnsv6-port <değer>: UDPv6 DNS isteklerini belirtilen port numarasına yönlendir (varsayılan 53).
+--dns-verb: DNS yönlendirme mesajlarını ayrıntılı olarak yazdır.
+--blacklist <txtfile>: Sadece sağlanan metin dosyasındaki alan adları ve alt alan adlarına karşı hile uygulama (HTTP Host/TLS SNI). Bu seçenek birden fazla kez kullanılabilir.
+--allow-no-sni: TLS SNI tespit edilemediğinde --blacklist etkinleştirilmişse yine de hile uygulama.
+--frag-by-sni: TLS paketinde SNI tespit edilirse, paketi SNI değerinden önce parçalara ayır.
+--set-ttl <değer>: Sahte İstek Modunu etkinleştir ve belirtilen TTL değeriyle gönder. DİKKAT! Beklenmedik şekillerde siteleri bozabilir. Dikkatli kullanın (veya --blacklist ile birlikte).
+--auto-ttl [a1-a2-m]: Sahte İstek Modunu etkinleştir, TTL'yi otomatik olarak tespit et ve mesafeye göre düşür. Eğer mesafe a2'den kısaysa TTL a2 kadar düşer. Eğer daha uzunsa, (a1; a2) ölçeği kullanılır ve mesafe bir ağırlık olarak hesaplanır. Eğer çıkan TTL m’den fazla ise, m olarak ayarlanır. Varsayılan: --auto-ttl 1-4-10. Ayrıca --min-ttl 3 olarak ayarlanır. DİKKAT! Beklenmedik şekillerde siteleri bozabilir. Dikkatli kullanın (veya --blacklist ile birlikte).
+--min-ttl <değer>: Fake Request Modu'nda, TTL mesafesinin minimum değeri (128/64 - TTL) için kullanılacak değeri belirler.
+--wrong-chksum: Sahte İstek Modunu etkinleştir ve yanlış TCP kontrol toplamıyla gönder. VM veya bazı yönlendiricilerle çalışmayabilir, ancak --set-ttl'den daha güvenlidir.
+--wrong-seq: Sahte İstek Modunu etkinleştir ve geçmişteki TCP SEQ/ACK ile gönder.
+--native-frag: Paketleri daha küçük parçalara ayırarak, pencere boyutunu küçültmeden paketleri parçala. Daha hızlı çalışır (bağlantıyı yavaşlatmaz) ve daha verimlidir.
+--reverse-frag: Paketleri --native-frag gibi parçala ancak ters sırayla gönder. HTTPS TLS ClientHello'yu segmentlere ayırmada sorun yaşayan sitelerle çalışır.
+--fake-from-hex <değer>: Sahte paketleri HEX değerlerinden yükleyerek Fake Request Modu için gönder (örneğin 1234abcDEF). Bu seçenek birden fazla kez kullanılabilir, bu durumda her sahte paket komut satırındaki sırayla gönderilecektir.
+--fake-with-sni <değer>: Fake Request Modu için belirtilen SNI domain adıyla sahte paketler oluştur. Paketler, Mozilla Firefox 130 TLS ClientHello paketini taklit eder (rastgele oluşturulmuş sahte SessionID, anahtar paylaşımları ve ECH grease ile). Birden fazla kez kullanılabilir.
+--fake-gen <değer>: Sahte Request Modu için rastgele doldurulmuş sahte paketler oluştur, değerini belirle (maksimum 30).
+--fake-resend <değer>: Her sahte paketi belirtilen sayıda tekrar gönder. Varsayılan: 1 (her paketi bir kez gönder).
+--max-payload [değer]: TCP yük verisi [değer] den fazla olan paketler işlenmez. Bu seçenek, büyük miktarda veriyi atlayarak işlemci kullanımını azaltmak için kullanılabilir (örneğin, dosya transferleri). Varsayılan: --max-payload 1200.
+Eski Modlar:
 
+-1: -p -r -s -f 2 -k 2 -n -e 2 (en uyumlu mod)
+-2: -p -r -s -f 2 -k 2 -n -e 40 (HTTPS için daha iyi hız ama hala uyumlu)
+-3: -p -r -s -e 40 (HTTP ve HTTPS için daha iyi hız)
+-4: -p -r -s (en iyi hız)
+Modern Modlar (daha stabil, daha uyumlu, daha hızlı):
 
-LEGACY modesets:
- -1          -p -r -s -f 2 -k 2 -n -e 2 (most compatible mode)
- -2          -p -r -s -f 2 -k 2 -n -e 40 (better speed for HTTPS yet still compatible)
- -3          -p -r -s -e 40 (better speed for HTTP and HTTPS)
- -4          -p -r -s (best speed)
+-5: -f 2 -e 2 --auto-ttl --reverse-frag --max-payload
+-6: -f 2 -e 2 --wrong-seq --reverse-frag --max-payload
+-7: -f 2 -e 2 --wrong-chksum --reverse-frag --max-payload
+-8: -f 2 -e 2 --wrong-seq --wrong-chksum --reverse-frag --max-payload
+-9: -f 2 -e 2 --wrong-seq --wrong-chksum --reverse-frag --max-payload -q (varsayılan mod)
 
-Modern modesets (more stable, more compatible, faster):
- -5          -f 2 -e 2 --auto-ttl --reverse-frag --max-payload
- -6          -f 2 -e 2 --wrong-seq --reverse-frag --max-payload
- -7          -f 2 -e 2 --wrong-chksum --reverse-frag --max-payload
- -8          -f 2 -e 2 --wrong-seq --wrong-chksum --reverse-frag --max-payload
- -9          -f 2 -e 2 --wrong-seq --wrong-chksum --reverse-frag --max-payload -q (this is the default)
-
- Note: combination of --wrong-seq and --wrong-chksum generates two different fake packets.
+Not: Bu argümanlar, çeşitli internet trafiği manipülasyonları ve güvenlik ayarları yaparak, kullanıcıların sansürü aşmalarını ve internet trafiği üzerinde daha fazla kontrol sahibi olmalarını sağlar. **--wrong-seq** ve **--wrong-chksum** kombinasyonu iki farklı sahte paket üretir.
 ```
 ## How to check
 To check if your ISP's DPI could be circumvented, first make sure that your provider does not poison DNS answers by enabling "Secure DNS (DNS over HTTPS)" option in your browser.
