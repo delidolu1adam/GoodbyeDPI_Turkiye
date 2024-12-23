@@ -35,7 +35,8 @@ Download [latest version from Releases page](https://github.com/ValdikSS/Goodbye
 ## Desteklenen Argümanlar
 Programınızın sürümü hakkında tüm bilgileri öğrenmek için başlangıçta -h (--help) argümanını kullanın.
 ```
-Kullanımı: goodbyedpi.exe [SEÇENEKLER...]
+Örnek Kullanımı: goodbyedpi.exe -5 veya goodbyedpi.exe -5 --dns-addr 1.1.1.1 --dns-port 53 --dnsv6-addr 2606:4700:4700::1111 --dnsv6-port 53
+
 -p → Pasif DPI'yi engelle.
 -q → QUIC/HTTP3'ü engelle.
 -r → Host başlığını "hoSt" olarak değiştir.
