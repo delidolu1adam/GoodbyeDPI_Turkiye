@@ -2,11 +2,11 @@ GoodbyeDPI Türkiye — Derin Paket İncelemesi Atlatma Aracı
 =========================
 Bu proje Türkiye'de kalıcı olarak engellenmiş **Discord** ve bazı durumlarda engellenen **Instagram**, **Youtube** vb. web sitesi ve uygulamalara VPN kullanmadan ve İnternet hızında bir değişiklik olmadan giriş yapmanızı sağlamak için GoodByeDPI'ın orjinal deposundan çatallanmış ve düzenlenmiş bir sürümüdür.
 
-Daha fazla bilgi edinmek isterseniz indirdiğiniz **GoodBye DPI Türkiye v0.2.3rc3/documents/turkish** klasör içeriğindeki dosyalara göz atabilirsiniz.
-
 Bu uygulama ve yazılım dosyaları, birçok İnternet Servis Sağlayıcısında bulunan ve belirli web sitelerine erişimi engelleyen **Derin Paket İnceleme Sistemleri**ni atlatmak için tasarlanmıştır.
 
 Optik ayırıcı veya port yansıtma (**Pasif DPI**) kullanılarak bağlanan ve herhangi bir veriyi engellemeyen ancak istenen hedeften daha hızlı yanıt veren DPI'ları ve sırayla bağlanan **Aktif DPI**'ları işler.
+
+Daha fazla bilgi edinmek isterseniz indirdiğiniz **GoodBye DPI Türkiye v0.2.3rc3/documents/turkish** klasör içeriğindeki dosyalara göz atabilirsiniz.
 
 > [!CAUTION]
 > **Windows 7, 8, 8.1, 10 ve 11** işletim sistemlerinde, komut dosyalarının **Yönetici** olarak çalıştırılması gerekir.
