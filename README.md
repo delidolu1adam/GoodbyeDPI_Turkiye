@@ -4,7 +4,7 @@ Bu proje Türkiye'de kalıcı olarak engellenmiş **Discord** ve bazı durumlard
 
 Daha fazla bilgi edinmek isterseniz indirdiğiniz **GoodBye DPI Türkiye v0.2.3rc3/documents/turkish** klasör içeriğindeki dosyalara göz atın.
 
-Bu yazılım, birçok İnternet Servis Sağlayıcısında bulunan ve belirli web sitelerine erişimi engelleyen **Derin Paket İnceleme Sistemleri**ni atlatmak için tasarlanmıştır.
+Bu uygulama ve yazılım dosyaları, birçok İnternet Servis Sağlayıcısında bulunan ve belirli web sitelerine erişimi engelleyen **Derin Paket İnceleme Sistemleri**ni atlatmak için tasarlanmıştır.
 
 Optik ayırıcı veya port yansıtma (**Pasif DPI**) kullanılarak bağlanan ve herhangi bir veriyi engellemeyen ancak istenen hedeften daha hızlı yanıt veren DPI'ları ve sırayla bağlanan **Aktif DPI**'ları işler.
 
@@ -65,3 +65,14 @@ Bilinen Sorunlar
 * QUIK ticaret yazılımı [GoodbyeDPI ile çakışabilir](https://github.com/ValdikSS/GoodbyeDPI/issues/677#issuecomment-2390595606). Çözüm için önce QUIK'i daha sonra GoodbyeDPI'ı başlatın.
 * ~~Bazı SSL/TLS yığınları parçalanmış ClientHello paketlerini işleyemiyor ve HTTPS web siteleri açılmıyor. Hata: [#4](https://github.com/ValdikSS/GoodbyeDPI/issues/4), [#64](https://github.com/ValdikSS/GoodbyeDPI/issues/64).~~ Parçalanma sorunları v0.1.7'de düzeltildi.
 * ~~ESET Antivirus, WinDivert sürücüsüyle uyumsuzdur [#91](https://github.com/ValdikSS/GoodbyeDPI/issues/91). Bu büyük ihtimalle WinDivert değil, antivirüs hatasıdır.~~
+
+Bilinen Sorunlar
+=========================
+> [!IMPORTANT]
+Bu uygulama ve yazılım dosyalarının kullanımı sonucunda doğabilecek her türlü yasal sorumluluk, kullanıcıların kendi sorumluluğundadır. Uygulama ve yazılım dosyaları, açık kaynak kodludur ve yalnızca araştırma, eğitim, bilgi paylaşımı ve kodlama eğitimi amacıyla geliştirilmiştir. Bu şartlar altında kullanılıp, kullanılmaması tamamen kullanıcıların kendi insiyatifine bırakılmıştır. 
+
+Özel Teşekkürler
+=========================
+[Goodbye DPI](https://github.com/ValdikSS/GoodbyeDPI) geliştiricisi **@ValdikSS**'e teşekkürler.
+[WinDivert](https://github.com/basil00/WinDivert) geliştiricisi **@basil00**'a teşekkürler.
+[BlockCheck](https://github.com/ValdikSS/blockcheck)'e katkıda bulunan herkese teşekkürler.
