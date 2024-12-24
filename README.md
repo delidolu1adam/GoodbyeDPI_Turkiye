@@ -8,7 +8,7 @@ Bu yazılım, birçok İnternet Servis Sağlayıcısında bulunan ve belirli web
 
 Optik ayırıcı veya port yansıtma (**Pasif DPI**) kullanılarak bağlanan ve herhangi bir veriyi engellemeyen ancak istenen hedeften daha hızlı yanıt veren DPI'ları ve sırayla bağlanan **Aktif DPI**'ları işler.
 
-> [!NOTE]
+> [!NOT]
 > **Windows 7, 8, 8.1, 10 ve 11** işletim sistemlerinde, komut dosyalarının **Yönetici** olarak çalıştırılması gerekir.
 
 > [!TIP]
