@@ -50,7 +50,9 @@ Bu yöntemi kullanırsanız, bilgisayarı her yeniden başlattığınızda Goodb
 - `11 - Windows Hizmeti Olarak Kur - DNS Yönlendirmeli v1.cmd`, komut dosyasına sağ tıklayın ve yönetici olarak çalıştırın.
 - Açılan komut penceresinde herhangi bir tuşa basın.
 - Eğer bu sizin için çalıştıysa olduğu gibi kullanabilirsiniz.
-- Eğer çalışmazsa diğer alternatif `12 - Windows Hizmeti Olarak Kur - DNS Yönlendirmeli v2.cmd`, `13 - Windows Hizmeti Olarak Kur - DNS Yönlendirmeli v3.cmd`, `14 - Windows Hizmeti Olarak Kur - DNS Yönlendirmeli v4.cmd`, `15 - Windows Hizmeti Olarak Kur - DNS Yönlendirmeli v5.cmd`, komut dosyalarını sırayla deneyebilirsiniz.
+- Eğer çalışmazsa diğer alternatif olarak hazırlanan
+`12 - Windows Hizmeti Olarak Kur - DNS Yönlendirmeli v2.cmd`, `13 - Windows Hizmeti Olarak Kur - DNS Yönlendirmeli v3.cmd`, `14 - Windows Hizmeti Olarak Kur - DNS Yönlendirmeli v4.cmd`, `15 - Windows Hizmeti Olarak Kur - DNS Yönlendirmeli v5.cmd`,
+komut dosyalarını sırayla deneyebilirsiniz.
 
 > [!WARNING]
 > Diğer `v2.cmd`, `v3.cmd`, `v4.cmd`, komut dosyalarını çalıştırmadan önce **18 - Hizmetleri Durdur ve Kaldır.cmd** komut dosyası ile herşeyi kaldırmayı ve temizlemeyi unutmayın.
