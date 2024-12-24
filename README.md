@@ -28,21 +28,22 @@ Kullanım Yöntemi #1 : Elle Başlat
 Bu yöntemi kullanırsanız, bilgisayarınızı her yeniden başlattığınızda istediğiniz herhangi bir komut dosyasını Yönetici olarak elle çalıştırmak zorundasınız. **Türkiye** için en hızlı ve en güvenili olanları `01, 02, 03, 04, 05, 06 ve 07` olarak sıraladım.
 
 * **01 - CloudFlare DNS Yönlendirmeli.cmd** komut dosyasına sağ tıklayın ve **Yönetici Olarak** çalıştırın.
-* **02 - Quad9 DNS Yönlendirmeli.cmd** komut dosyasına sağ tıklayın ve **Yönetici Olarak** çalıştırın.
-* **03 - Google DNS Yönlendirmeli.cmd** komut dosyasına sağ tıklayın ve **Yönetici Olarak** çalıştırın.
-* **04 - Open DNS Yönlendirmeli.cmd** komut dosyasına sağ tıklayın ve **Yönetici Olarak** çalıştırın.
-* **05 - AdGuard DNS Yönlendirmeli.cmd** komut dosyasına sağ tıklayın ve **Yönetici Olarak** çalıştırın.
-* **06 - Comodo DNS Yönlendirmeli.cmd** komut dosyasına sağ tıklayın ve **Yönetici Olarak** çalıştırın.
-* **07 - Yandex DNS Yönlendirmeli.cmd** komut dosyasına sağ tıklayın ve **Yönetici Olarak** çalıştırın.
+* Açılan pencereyi kapatmadan, istediğiniz uygulamaya veya web sitesine giriş yapabilirsiniz. Hepsi bu kadar!
 
 > [!NOTE]
 Bu komut dosyaları, GoodbyeDPI'ı önerilen modda başlatır ve çalıştırdığınız komut dosyasına göre DNS çözücü yönlendirmesini **CloudFlare, Google, Quad9, OpenDNS, AdGuard, Yandex ve Comodo** adreslerine (DNS zehirlenmesini engellemek için) standart olmayan bir port üzerinden gerçekleştirir. Eğer burada anlatıldığı gibi sorunsuz çalışıyorsa, olduğu gibi kullanmaya devam edebilir ya da diğer DNS hizmet sağlayıcıları için oluşturulmuş yapılandırma dosyalarını deneyebilir veya özelleştirebilirsiniz.
 
-Kullanım Yöntemi #2 : Komut Dosyasını Otomatik Olarak Başlat
+Kullanım Yöntemi #2 : Otomatik Olarak Başlat
 =========================
 Bu yöntemi kullanırsanız, bilgisayarınızı her yeniden başlattığınızda istediğiniz komut dosyasını **Başlangıç Programlarına** ekleyerek otomatik olarak başlatır ve ekstra birşey yapmanıza gerek kalmaz.
 
-Düzenleme devam ediyor...
+* Öncelikle buradaki kullanıcı adını düzenleyin **C:\Users\KULLANICI-ADINIZ\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup**
+* Herhangi bir klasör adres çubuğuna düzenlemiş olduğunuz adresi yapıştırın ve ilgili klasörü açın.
+* Daha sonra **01 - CloudFlare DNS Yönlendirmeli.cmd** komut dosyasına sağ tıklayın > Daha fazla seçenek göster > Kısayol oluştur
+* Oluşturmuş olduğunuz **01 - CloudFlare DNS Yönlendirmeli.cmd - Kısayol** komut dosyasının kısayoluna sağ tıklayıp **kesin** (CTRL + X)
+* **C:\Users\KULLANICI-ADINIZ\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup** klasörünün içinde boş bir yere sağ tıklayıp **yapıştırın** (CTRL + V)
+* Şimdi herşeyi kapatıp bilgisayarınızı yeniden başlatın, görmüş olduğunuz gibi elle açmanız gereken pencere windows ile otomatik olarak açılıyor.
+* Açılan pencereyi kapatmadan, istediğiniz uygulamaya veya web sitesine giriş yapabilirsiniz. Hepsi bu kadar!
 
 Kullanım Yöntemi #3 : Windows Hizmeti Olarak Başlat
 =========================
@@ -52,10 +53,10 @@ Bu yöntemi kullanırsanız, bilgisayarı her yeniden başlattığınızda Goodb
 - `11 - Windows Hizmeti Olarak Kur - DNS Yönlendirmeli v1.cmd`, komut dosyasına sağ tıklayın ve yönetici olarak çalıştırın.
 - Açılan komut penceresinde herhangi bir tuşa basın.
 - Eğer bu sizin için çalıştıysa olduğu gibi kullanabilirsiniz.
-- Eğer çalışmazsa diğer alternatif olarak hazırlanan 12-13-14-15 numaralı `v2.cmd`, `v3.cmd`, `v4.cmd`, ve `v5.cmd` komut dosyalarını sırayla deneyebilirsiniz.
+- Eğer çalışmazsa diğer alternatif olarak hazırladığım `12, 13, 14 ve 15` numaralı `v2.cmd`, `v3.cmd`, `v4.cmd`, ve `v5.cmd` komut dosyalarını sırayla deneyebilirsiniz.
 
 > [!WARNING]
-> Diğer `v2.cmd`, `v3.cmd`, `v4.cmd`, ve `v5.cmd` komut dosyalarını çalıştırmadan önce **18 - Hizmetleri Durdur ve Kaldır.cmd** komut dosyası ile herşeyi kaldırmayı ve temizlemeyi unutmayın.
+> Diğer `12, 13, 14 ve 15` numaralı `v2.cmd`, `v3.cmd`, `v4.cmd`, ve `v5.cmd` komut dosyalarını çalıştırmadan önce **18 - Hizmetleri Durdur ve Kaldır.cmd** komut dosyası ile herşeyi kaldırmayı ve temizlemeyi unutmayın.
 
 Bilinen Sorunlar
 =========================
