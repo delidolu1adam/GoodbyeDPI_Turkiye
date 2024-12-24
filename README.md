@@ -74,5 +74,7 @@ Bu uygulama ve yazılım dosyalarının kullanımı sonucunda doğabilecek her t
 Özel Teşekkürler
 =========================
 [Goodbye DPI](https://github.com/ValdikSS/GoodbyeDPI) geliştiricisi **@ValdikSS**'e teşekkürler.
+
 [WinDivert](https://github.com/basil00/WinDivert) geliştiricisi **@basil00**'a teşekkürler.
+
 [BlockCheck](https://github.com/ValdikSS/blockcheck)'e katkıda bulunan herkese teşekkürler.
