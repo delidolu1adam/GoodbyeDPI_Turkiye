@@ -17,7 +17,8 @@ Yazılım açık kaynak kodlu olduğundan tüm kodları inceleyebilirsiniz. WinD
 
 Bu dosya da virüs var, bilgilerim çalındı vb. yalan yanlış ithamlarda bulunan kişilere kulak asmayın. Dilerseniz indirmeden önce dosyanın indirme bağlantısını kullanarak [buradan](https://www.virustotal.com/gui/home/upload) veya dosyayı indirdikten sonra dosyayı yükleyerek [buradan](https://www.virustotal.com/gui/home/url) virüs taraması yapabilirsiniz.
 
-Kodların ne işe yaradığını ve hangi amaçla yazıldığını öğrenmek için kod bilgisine sahip olmanıza da gerek yok [buraya](https://chatgpt.com/) tıklayın ardından **Bu kodlarda virüs var mı? Hangi amaçla yazılmış? Ne işe yarıyor? Bilgilerim çalınır mı? Bitcoin madenciği yapıyor mu?** sorununu yazdıktan sonra **SHIFT + ENTER** tuşlarına basarak 2 satır aşağı inin ve merak ettiğiniz kodu da yapıştırıp gönderin. :)
+> [!NOTE]
+> Kodların ne işe yaradığını ve hangi amaçla yazıldığını öğrenmek için kod bilgisine sahip olmanıza da gerek yok [buraya](https://chatgpt.com/) tıklayın ardından **Bu kodlarda virüs var mı? Hangi amaçla yazılmış? Ne işe yarıyor? Bilgilerim çalınır mı? Bitcoin madenciği yapıyor mu?** sorununu yazdıktan sonra **SHIFT + ENTER** tuşlarına basarak 2 satır aşağı inin ve merak ettiğiniz kodu da yapıştırıp gönderin. :)
 
 Nasıl Kullanılır?
 =========================
