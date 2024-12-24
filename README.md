@@ -13,7 +13,9 @@ Optik ayırıcı veya port yansıtma (**Pasif DPI**) kullanılarak bağlanan ve 
 
 Virüs, Veri Sızıntısı ve Bitcoin Madenciliği
 =========================
-Yazılım açık kaynak kodlu olduğundan tüm kodları inceleyebilirsiniz. WinDivert.dll ve WinDivert64.sys dosyaları fonksiyonlarından dolayı bazı antivirüs programlarında virüs olarak algılanabilir. Ancak endişe etmenizi gerektirecek bir durum yok. Bu DLL ve SYS dosyaları da açık kaynak kodludur ve istendiğinde [buraya tıklayarak](https://github.com/basil00/WinDivert) inceleyebilirsiniz. Yazılımı kullanmak ya da kullanmamak tamamen sizin kendi insiyatifinizdedir.
+Yazılım açık kaynak kodlu olduğundan tüm kodları inceleyebilirsiniz. WinDivert.dll ve WinDivert64.sys dosyaları fonksiyonlarından dolayı bazı antivirüs programlarında virüs olarak algılanabilir.
+
+Ancak endişe etmenizi gerektirecek bir durum yok. Bu DLL ve SYS dosyaları da açık kaynak kodludur ve istendiğinde [buradan](https://github.com/basil00/WinDivert) inceleyebilirsiniz. Yazılımı kullanmak ya da kullanmamak tamamen sizin kendi insiyatifinizdedir.
 
 Bu dosya da virüs var, bilgilerim çalındı vb. yalan yanlış ithamlarda bulunan kişilere kulak asmayın. Dilerseniz indirmeden önce dosyanın indirme bağlantısını kullanarak [buradan](https://www.virustotal.com/gui/home/upload) veya dosyayı indirdikten sonra dosyayı yükleyerek [buradan](https://www.virustotal.com/gui/home/url) virüs taraması yapabilirsiniz.
 
@@ -22,8 +24,6 @@ Bu dosya da virüs var, bilgilerim çalındı vb. yalan yanlış ithamlarda bulu
 
 Nasıl Kullanılır?
 =========================
-
-[Son Sürümler](https://github.com/ValdikSS/GoodbyeDPI/releases) sayfasından son sürümü indirin ve ZIP dosyasına sağ tıklayarak Tümünü Ayıkla diyerek klasöre çıkartın.
 
 * **Türkiye** için **01 - CloudFlare DNS Yönlendirmeli.cmd** komut dosyasına sağ tıklayın ve **Yönetici Olarak** çalıştırın.
 
