@@ -66,10 +66,10 @@ Bilinen Sorunlar
 * ~~Bazı SSL/TLS yığınları parçalanmış ClientHello paketlerini işleyemiyor ve HTTPS web siteleri açılmıyor. Hata: [#4](https://github.com/ValdikSS/GoodbyeDPI/issues/4), [#64](https://github.com/ValdikSS/GoodbyeDPI/issues/64).~~ Parçalanma sorunları v0.1.7'de düzeltildi.
 * ~~ESET Antivirus, WinDivert sürücüsüyle uyumsuzdur [#91](https://github.com/ValdikSS/GoodbyeDPI/issues/91). Bu büyük ihtimalle WinDivert değil, antivirüs hatasıdır.~~
 
-Bilinen Sorunlar
+Yasal Sorumluluk
 =========================
 > [!IMPORTANT]
-Bu uygulama ve yazılım dosyalarının kullanımı sonucunda doğabilecek her türlü yasal sorumluluk, kullanıcıların kendi sorumluluğundadır. Uygulama ve yazılım dosyaları, açık kaynak kodludur ve yalnızca araştırma, eğitim, bilgi paylaşımı ve kodlama eğitimi amacıyla geliştirilmiştir. Bu şartlar altında kullanılıp, kullanılmaması tamamen kullanıcıların kendi insiyatifine bırakılmıştır. 
+Bu uygulama ve yazılım dosyalarının kullanımı sonucunda doğabilecek her türlü yasal sorumluluk, kullanıcıların kendine aittir. Uygulama ve yazılım dosyaları, açık kaynak kodludur ve yalnızca araştırma, eğitim, bilgi paylaşımı ve kodlama eğitimi amacıyla geliştirilmiştir. Bu şartlar altında kullanılıp, kullanılmaması tamamen kullanıcıların kendi insiyatifine bırakılmıştır. 
 
 Özel Teşekkürler
 =========================
