@@ -33,7 +33,7 @@ Bu yöntemi kullanırsanız, bilgisayarınızı her yeniden başlattığınızda
 > [!NOTE]
 Bu komut dosyaları, GoodbyeDPI'ı önerilen modda başlatır ve çalıştırdığınız komut dosyasına göre DNS çözücü yönlendirmesini **CloudFlare, Google, Quad9, OpenDNS, AdGuard, Yandex ve Comodo** adreslerine (DNS zehirlenmesini engellemek için) standart olmayan bir port üzerinden gerçekleştirir. Eğer burada anlatıldığı gibi sorunsuz çalışıyorsa, olduğu gibi kullanmaya devam edebilir ya da diğer DNS hizmet sağlayıcıları için oluşturulmuş yapılandırma dosyalarını deneyebilir veya özelleştirebilirsiniz.
 
-Kullanım Yöntemi #2 : Otomatik Olarak Başlat
+Kullanım Yöntemi #2 : Otomatik Olarak Başlat (bu yöntemin çalışması için komut dosyalarına bir kaç kod eklemem gerekiyor - henüz eklemedim!)
 =========================
 Bu yöntemi kullanırsanız, bilgisayarınızı her yeniden başlattığınızda istediğiniz komut dosyasını **Başlangıç Programlarına** ekleyerek otomatik olarak başlatır ve ekstra birşey yapmanıza gerek kalmaz.
 
