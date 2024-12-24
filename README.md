@@ -8,20 +8,8 @@ Bu yazılım, birçok İnternet Servis Sağlayıcısında bulunan ve belirli web
 
 Optik ayırıcı veya port yansıtma (**Pasif DPI**) kullanılarak bağlanan ve herhangi bir veriyi engellemeyen ancak istenen hedeften daha hızlı yanıt veren DPI'ları ve sırayla bağlanan **Aktif DPI**'ları işler.
 
-> [!NOT]
-> **Windows 7, 8, 8.1, 10 ve 11** işletim sistemlerinde, komut dosyalarının **Yönetici** olarak çalıştırılması gerekir.
-
 > [!TIP]
-> Helpful advice for doing things better or more easily.
-
-> [!IMPORTANT]
-> Key information users need to know to achieve their goal.
-
-> [!WARNING]
-> Urgent info that needs immediate user attention to avoid problems.
-
-> [!CAUTION]
-> Advises about risks or negative outcomes of certain actions.
+> **Windows 7, 8, 8.1, 10 ve 11** işletim sistemlerinde, komut dosyalarının **Yönetici** olarak çalıştırılması gerekir.
 
 Virüs, Veri Sızıntısı ve Bitcoin Madenciliği
 =========================
@@ -125,7 +113,8 @@ Modern Mod Ayarları (daha stabil, daha uyumlu, daha hızlı):
 -8: -f 2 -e 2 --wrong-seq --wrong-chksum --reverse-frag --max-payload
 -9: -f 2 -e 2 --wrong-seq --wrong-chksum --reverse-frag --max-payload -q (varsayılan ayar)
 
-Not: Bu argümanlar, çeşitli internet trafiği manipülasyonları ve güvenlik ayarları yaparak, kullanıcıların sansürü aşmalarını ve internet trafiği üzerinde daha fazla kontrol sahibi olmalarını sağlar. **--wrong-seq** ve **--wrong-chksum** kombinasyonu iki farklı sahte paket üretir.
+> [!NOTE]
+> Bu argümanlar, çeşitli internet trafiği manipülasyonları ve güvenlik ayarları yaparak, kullanıcıların sansürü aşmalarını ve internet trafiği üzerinde daha fazla kontrol sahibi olmalarını sağlar. **--wrong-seq** ve **--wrong-chksum** kombinasyonu iki farklı sahte paket üretir.
 ```
 ## Nasıl Kontrol Edilir?
 İnternet servis sağlayıcınızın DPI'sinin aşılabileceğini kontrol etmek için öncelikle tarayıcınızda "Güvenli DNS (HTTPS üzerinden DNS)" seçeneğini etkinleştirerek sağlayıcınızın DNS yanıtlarını zehirlemediğinden emin olun.
