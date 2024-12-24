@@ -6,7 +6,7 @@ Bu uygulama ve yazılım dosyaları, birçok İnternet Servis Sağlayıcısında
 
 Optik ayırıcı veya port yansıtma (**Pasif DPI**) kullanılarak bağlanan ve herhangi bir veriyi engellemeyen ancak istenen hedeften daha hızlı yanıt veren DPI'ları ve sırayla bağlanan **Aktif DPI**'ları işler.
 
-Daha fazla bilgi edinmek isterseniz indirdiğiniz **GoodBye DPI Türkiye v0.2.3rc3/documents/turkish** klasör içeriğindeki dosyalara göz atabilirsiniz.
+Daha fazla bilgi için indirdiğiniz **GoodBye DPI Türkiye v0.2.3rc3/documents/turkish** klasör içeriğindeki dosyalara göz atabilirsiniz.
 
 > [!CAUTION]
 > **Windows 7, 8, 8.1, 10 ve 11** işletim sistemlerinde, komut dosyalarının **Yönetici** olarak çalıştırılması gerekir.
