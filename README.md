@@ -25,13 +25,15 @@ Bu dosya da virüs var, bilgilerim çalındı vb. yalan yanlış ithamlarda bulu
 Kullanım Yöntemi #1 : Elle Başlat
 =========================
 
-Bu yöntemi kullanırsanız, bilgisayarınızı her yeniden başlattığınızda istediğiniz komut dosyasını Yönetici olarak elle çalıştırmak zorundasınız.
+Bu yöntemi kullanırsanız, bilgisayarınızı her yeniden başlattığınızda istediğiniz herhangi bir komut dosyasını Yönetici olarak elle çalıştırmak zorundasınız. **Türkiye** için en hızlı ve en güvenili olanları `01, 02, 03, 04, 05, 06 ve 07` olarak sıraladım.
 
-* **Türkiye** için **01 - CloudFlare DNS Yönlendirmeli.cmd** komut dosyasına sağ tıklayın ve **Yönetici Olarak** çalıştırın.
-
-* **Türkiye** için **07 - Yandex DNS Yönlendirmeli.cmd** komut dosyasına sağ tıklayın ve **Yönetici Olarak** çalıştırın.
-
-* **Diğer Ülkeler** için **01 - CloudFlare DNS Yönlendirmeli.cmd** komut dosyasına sağ tıklayın ve **Yönetici Olarak** çalıştırın.
+* **01 - CloudFlare DNS Yönlendirmeli.cmd** komut dosyasına sağ tıklayın ve **Yönetici Olarak** çalıştırın.
+* **02 - Quad9 DNS Yönlendirmeli.cmd** komut dosyasına sağ tıklayın ve **Yönetici Olarak** çalıştırın.
+* **03 - Google DNS Yönlendirmeli.cmd** komut dosyasına sağ tıklayın ve **Yönetici Olarak** çalıştırın.
+* **04 - Open DNS Yönlendirmeli.cmd** komut dosyasına sağ tıklayın ve **Yönetici Olarak** çalıştırın.
+* **05 - AdGuard DNS Yönlendirmeli.cmd** komut dosyasına sağ tıklayın ve **Yönetici Olarak** çalıştırın.
+* **06 - Comodo DNS Yönlendirmeli.cmd** komut dosyasına sağ tıklayın ve **Yönetici Olarak** çalıştırın.
+* **07 - Yandex DNS Yönlendirmeli.cmd** komut dosyasına sağ tıklayın ve **Yönetici Olarak** çalıştırın.
 
 > [!NOTE]
 Bu komut dosyaları, GoodbyeDPI'ı önerilen modda başlatır ve çalıştırdığınız komut dosyasına göre DNS çözücü yönlendirmesini **CloudFlare, Google, Quad9, OpenDNS, AdGuard, Yandex ve Comodo** adreslerine (DNS zehirlenmesini engellemek için) standart olmayan bir port üzerinden gerçekleştirir. Eğer burada anlatıldığı gibi sorunsuz çalışıyorsa, olduğu gibi kullanmaya devam edebilir ya da diğer DNS hizmet sağlayıcıları için oluşturulmuş yapılandırma dosyalarını deneyebilir veya özelleştirebilirsiniz.
