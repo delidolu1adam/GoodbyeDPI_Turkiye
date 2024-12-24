@@ -36,13 +36,13 @@ Bilgisayarı açtığınızda bu işlemi her zaman tekrarlamanız gerekir.
 > [!NOTE]
 Bu komut dosyaları, GoodbyeDPI'ı önerilen modda başlatır ve çalıştırdığınız komut dosyasına göre DNS çözücü yönlendirmesini **CloudFlare, Google, Quad9, OpenDNS, AdGuard, Yandex ve Comodo** adreslerine (DNS zehirlenmesini engellemek için) standart olmayan bir port üzerinden gerçekleştirir. Eğer burada anlatıldığı gibi sorunsuz çalışıyorsa, olduğu gibi kullanmaya devam edebilir ya da diğer DNS hizmet sağlayıcıları için oluşturulmuş yapılandırma dosyalarını deneyebilir veya özelleştirebilirsiniz.
 
-# Komut Dosyasını Otomatik Olarak Başlatma
+Komut Dosyasını Otomatik Olarak Başlatma
 =========================
 Her bilgisayarı açtığınızda bu dosyaları yönetici olarak çalıştırmak istemiyorsanız, iki farklı yöntem deneyebilirsiniz.
 
 ...
 
-# Windows Hizmeti Olarak Kurma
+Windows Hizmeti Olarak Kurma
 =========================
 Bilgisayarı açtığınızda hizmetin otomatik olarak başlamasını istiyorsanız, aşağıdaki adımları sırasıyla uygulayabilirsiniz.
 
@@ -55,7 +55,7 @@ Bilgisayarı açtığınızda hizmetin otomatik olarak başlamasını istiyorsan
 > [!WARNING]
 > Diğer komut dosyalarını denemeden önce **18 - Hizmetleri Durdur ve Kaldır.cmd** komut dosyası ile herşeyi kaldırmayı ve temizlemeyi unutmayın.
 
-# Bilinen Sorunlar
+Bilinen Sorunlar
 =========================
 * Eski Windows 7 kurulumlarında, SHA256 dijital imzalarına yönelik desteğin olmaması nedeniyle WinDivert sürücüsünü yükleyemiyor. KB3033929 [x86](https://www.microsoft.com/en-us/download/details.aspx?id=46078)/[x64](https://www.microsoft.com/en-us/download/details.aspx?id=46148) güncelleme paketini yükleyin veya daha iyi seçenek olan Windows Güncelleme'yi kullanarak tüm sisteminizi en yeni sürüme güncelleyin.
 * Intel/Qualcomm Killer ağ kartları: Killer Control Center'daki Advanced Stream Detect, GoodbyeDPI ile uyumlu değil, [devre dışı bırakın](https://github.com/ValdikSS/GoodbyeDPI/issues/541#issuecomment-2296038239).
