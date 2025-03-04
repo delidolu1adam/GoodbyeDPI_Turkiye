@@ -82,4 +82,4 @@ Bu uygulama ve yazılım dosyalarının kullanımı sonucunda doğabilecek her t
 
 [BlockCheck](https://github.com/ValdikSS/blockcheck)'e katkıda bulunan herkese teşekkürler.
 
-SuperOnline alternatif dosya için [cagritaskn](https://github.com/cagritaskn/GoodbyeDPI-Turkey)'a teşekkürler.
+SuperOnline alternatif dosya eki için **@cagritaskn**'a teşekkürler.
