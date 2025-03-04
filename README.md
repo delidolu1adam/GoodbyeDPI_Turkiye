@@ -81,3 +81,5 @@ Bu uygulama ve yazılım dosyalarının kullanımı sonucunda doğabilecek her t
 [WinDivert](https://github.com/basil00/WinDivert) geliştiricisi **@basil00**'a teşekkürler.
 
 [BlockCheck](https://github.com/ValdikSS/blockcheck)'e katkıda bulunan herkese teşekkürler.
+
+SuperOnline alternatif dosya için [cagritaskn](https://github.com/cagritaskn/GoodbyeDPI-Turkey)'a teşekkürler.
