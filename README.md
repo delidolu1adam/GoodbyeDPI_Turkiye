@@ -64,7 +64,7 @@ Bu yöntemi kullanırsanız, bilgisayarı her yeniden başlattığınızda Goodb
 ## Desteklenen Argümanlar
 Programınızın sürümü hakkında ilgili bilgileri almak için başlangıçta -h (--help) komutunu kullanabilirsiniz.
 ```
-Kullanımı: goodbyedpi.exe [OPTION...]
+**Kullanımı: goodbyedpi.exe [OPTION...]**
  -p          block passive DPI
  -q          block QUIC/HTTP3
  -r          replace Host with hoSt
@@ -125,14 +125,13 @@ Kullanımı: goodbyedpi.exe [OPTION...]
                           May skip some huge HTTP requests from being processed.
                           Default (if set): --max-payload 1200.
 
-
-LEGACY Mod Setleri:
+**LEGACY Mod Setleri:**
  -1          -p -r -s -f 2 -k 2 -n -e 2 (en uyumlu mod)
  -2          -p -r -s -f 2 -k 2 -n -e 40 ((HTTPS için daha iyi hız, yine de uyumlu)
  -3          -p -r -s -e 40 (HTTP ve HTTPS için daha iyi hız)
  -4          -p -r -s (en iyi hız)
 
-Modern Mod Setleri (daha kararlı, daha uyumlu, daha hızlı):
+**Modern Mod Setleri (daha kararlı, daha uyumlu, daha hızlı):**
  -5          -f 2 -e 2 --auto-ttl --reverse-frag --max-payload (otomatik TTL, ters parçalama; hızlı ve uyumlu)
  -6          -f 2 -e 2 --wrong-seq --reverse-frag --max-payload (yanlış sıra numarası ile DPI atlatma)
  -7          -f 2 -e 2 --wrong-chksum --reverse-frag --max-payload  (yanlış kontrol toplamı ile DPI atlatma)
