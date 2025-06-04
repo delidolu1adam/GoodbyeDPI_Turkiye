@@ -61,6 +61,87 @@ Bu yöntemi kullanırsanız, bilgisayarı her yeniden başlattığınızda Goodb
 > [!WARNING]
 > Diğer `12, 13, 14 ve 15` numaralı `v2.cmd`, `v3.cmd`, `v4.cmd`, ve `v5.cmd` komut dosyalarını çalıştırmadan önce **18 - Hizmetleri Durdur ve Kaldır.cmd** komut dosyası ile herşeyi kaldırmayı ve temizlemeyi unutmayın.
 
+## Desteklenen Argümanlar
+Programınızın sürümü hakkında ilgili bilgileri almak için başlangıçta -h (--help) komutunu kullanabilirsiniz.
+```
+Kullanımı: goodbyedpi.exe [OPTION...]
+ -p          block passive DPI
+ -q          block QUIC/HTTP3
+ -r          replace Host with hoSt
+ -s          remove space between host header and its value
+ -m          mix Host header case (test.com -> tEsT.cOm)
+ -f <value>  set HTTP fragmentation to value
+ -k <value>  enable HTTP persistent (keep-alive) fragmentation and set it to value
+ -n          do not wait for first segment ACK when -k is enabled
+ -e <value>  set HTTPS fragmentation to value
+ -a          additional space between Method and Request-URI (enables -s, may break sites)
+ -w          try to find and parse HTTP traffic on all processed ports (not only on port 80)
+ --port        <value>    additional TCP port to perform fragmentation on (and HTTP tricks with -w)
+ --ip-id       <value>    handle additional IP ID (decimal, drop redirects and TCP RSTs with this ID).
+                          This option can be supplied multiple times.
+ --dns-addr    <value>    redirect UDP DNS requests to the supplied IP address (experimental)
+ --dns-port    <value>    redirect UDP DNS requests to the supplied port (53 by default)
+ --dnsv6-addr  <value>    redirect UDPv6 DNS requests to the supplied IPv6 address (experimental)
+ --dnsv6-port  <value>    redirect UDPv6 DNS requests to the supplied port (53 by default)
+ --dns-verb               print verbose DNS redirection messages
+ --blacklist   <txtfile>  perform circumvention tricks only to host names and subdomains from
+                          supplied text file (HTTP Host/TLS SNI).
+                          This option can be supplied multiple times.
+ --allow-no-sni           perform circumvention if TLS SNI can't be detected with --blacklist enabled.
+ --frag-by-sni            if SNI is detected in TLS packet, fragment the packet right before SNI value.
+ --set-ttl     <value>    activate Fake Request Mode and send it with supplied TTL value.
+                          DANGEROUS! May break websites in unexpected ways. Use with care (or --blacklist).
+ --auto-ttl    [a1-a2-m]  activate Fake Request Mode, automatically detect TTL and decrease
+                          it based on a distance. If the distance is shorter than a2, TTL is decreased
+                          by a2. If it's longer, (a1; a2) scale is used with the distance as a weight.
+                          If the resulting TTL is more than m(ax), set it to m.
+                          Default (if set): --auto-ttl 1-4-10. Also sets --min-ttl 3.
+                          DANGEROUS! May break websites in unexpected ways. Use with care (or --blacklist).
+ --min-ttl     <value>    minimum TTL distance (128/64 - TTL) for which to send Fake Request
+                          in --set-ttl and --auto-ttl modes.
+ --wrong-chksum           activate Fake Request Mode and send it with incorrect TCP checksum.
+                          May not work in a VM or with some routers, but is safer than set-ttl.
+ --wrong-seq              activate Fake Request Mode and send it with TCP SEQ/ACK in the past.
+ --native-frag            fragment (split) the packets by sending them in smaller packets, without
+                          shrinking the Window Size. Works faster (does not slow down the connection)
+                          and better.
+ --reverse-frag           fragment (split) the packets just as --native-frag, but send them in the
+                          reversed order. Works with the websites which could not handle segmented
+                          HTTPS TLS ClientHello (because they receive the TCP flow "combined").
+ --fake-from-hex <value>  Load fake packets for Fake Request Mode from HEX values (like 1234abcDEF).
+                          This option can be supplied multiple times, in this case each fake packet
+                          would be sent on every request in the command line argument order.
+ --fake-with-sni <value>  Generate fake packets for Fake Request Mode with given SNI domain name.
+                          The packets mimic Mozilla Firefox 130 TLS ClientHello packet
+                          (with random generated fake SessionID, key shares and ECH grease).
+                          Can be supplied multiple times for multiple fake packets.
+ --fake-gen <value>       Generate random-filled fake packets for Fake Request Mode, value of them
+                          (up to 30).
+ --fake-resend <value>    Send each fake packet value number of times.
+                          Default: 1 (send each packet once).
+ --max-payload [value]    packets with TCP payload data more than [value] won't be processed.
+                          Use this option to reduce CPU usage by skipping huge amount of data
+                          (like file transfers) in already established sessions.
+                          May skip some huge HTTP requests from being processed.
+                          Default (if set): --max-payload 1200.
+
+
+LEGACY Mod Setleri:
+ -1          -p -r -s -f 2 -k 2 -n -e 2 (en uyumlu mod)
+ -2          -p -r -s -f 2 -k 2 -n -e 40 ((HTTPS için daha iyi hız, yine de uyumlu)
+ -3          -p -r -s -e 40 (HTTP ve HTTPS için daha iyi hız)
+ -4          -p -r -s (en iyi hız)
+
+Modern Mod Setleri (daha kararlı, daha uyumlu, daha hızlı):
+ -5          -f 2 -e 2 --auto-ttl --reverse-frag --max-payload (otomatik TTL, ters parçalama; hızlı ve uyumlu)
+ -6          -f 2 -e 2 --wrong-seq --reverse-frag --max-payload (yanlış sıra numarası ile DPI atlatma)
+ -7          -f 2 -e 2 --wrong-chksum --reverse-frag --max-payload  (yanlış kontrol toplamı ile DPI atlatma)
+ -8          -f 2 -e 2 --wrong-seq --wrong-chksum --reverse-frag --max-payload (sıra + kontrol toplamı kombinasyonu)
+ -9          -f 2 -e 2 --wrong-seq --wrong-chksum --reverse-frag --max-payload -q (varsayılan değer, en etkili ve sessiz mod)
+
+NOT: --wrong-seq ve --wrong-chksum kombinasyonu, iki farklı sahte paket üretir.
+```
+
 Bilinen Sorunlar
 =========================
 * Eski Windows 7 kurulumlarında, SHA256 dijital imzalarına yönelik desteğin olmaması nedeniyle WinDivert sürücüsünü yükleyemiyor. KB3033929 [x86](https://www.microsoft.com/en-us/download/details.aspx?id=46078)/[x64](https://www.microsoft.com/en-us/download/details.aspx?id=46148) güncelleme paketini yükleyin veya daha iyi seçenek olan Windows Güncelleme'yi kullanarak tüm sisteminizi en yeni sürüme güncelleyin.
