@@ -1,3 +1,14 @@
+Kaspersky Antivirüs Programı Hakkında Önemli Duyuru
+=========================
+İnternette dolaşan haberlerin aksine; şu ana kadar Kaspersky ile Rus hükümeti arasında, doğrudan "GoodbyeDPI’yi engellemek amacıyla yapılmış özel bir anlaşma" olduğuna dair herhangi bir resmi, teknik ya da sızdırılmış kanıt bulunmamaktadır. Dolayısıyla ne sızdırılmış belgelerde ne de hükümet açıklamalarında GoodbyeDPI’ye özel bir anlaşma veya hedefleme söz konusu değildir.
+
+Kaspersky'nin GoodbyeDPI’yi engellemesi, büyük ihtimalle genel ağ güvenliği politikalarının ve ürün özelliklerinin doğal bir sonucudur.
+- HTTP/HTTPS trafiğini analiz eder.
+- Paket yapısını bozan uygulamaları "şüpheli" olarak algılar.
+- Man-in-the-Middle (MitM) saldırılarına karşı koruma sağlar.
+
+Bu davranış, Rusya özelinde değil; Kaspersky’nin genel ürün tasarımı ile ilgilidir. Yaklaşık 20 yıldır Antivirüs programı kullanmıyorum, gerek de duymuyorum. Bu engelleme ürün ayarlarından ince/gelişmiş bir ayar yaparak bu düzeltilebilir mi emin değilim. Bunu Kaspersky kullanan kullanıcılar ile forumda tartışabilir, fikir alışverişinde bulunabilirsiniz. Şayet bu konuda başarısız olursanız, tek yapmanız gereken Kaspersky bilgisayarınızdan tamamen kaldırmak, zira devre dışı bıraksanız bile büyük olasılıkla GoodBye DPI'ı yine de engelleyecektir.
+
 GoodbyeDPI Türkiye — Derin Paket İncelemesi Atlatma Aracı
 =========================
 Bu proje Türkiye'de kalıcı olarak engellenmiş **Discord** ve bazı durumlarda engellenen **Instagram**, **Youtube** vb. web sitesi ve uygulamalara VPN kullanmadan ve İnternet hızında bir değişiklik olmadan giriş yapmanızı sağlamak için GoodByeDPI'ın orjinal deposundan çatallanmış ve düzenlenmiş bir sürümüdür.
