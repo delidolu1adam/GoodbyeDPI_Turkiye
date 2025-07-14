@@ -73,8 +73,8 @@ Bu yöntemi kullanırsanız, bilgisayarı her yeniden başlattığınızda Goodb
 > Diğer `12, 13, 14 ve 15` numaralı `v2.cmd`, `v3.cmd`, `v4.cmd`, ve `v5.cmd` komut dosyalarını çalıştırmadan önce **18 - Hizmetleri Durdur ve Kaldır.cmd** komut dosyası ile herşeyi kaldırmayı ve temizlemeyi unutmayın.
 
 ♻️ ## Desteklenen Argümanlar
-Programınızın sürümü hakkında ilgili bilgileri almak için başlangıçta -h (--help) komutunu kullanabilirsiniz.
 =========================
+Programınızın sürümü hakkında ilgili bilgileri almak için başlangıçta -h (--help) komutunu kullanabilirsiniz.
 ```
 Kullanımı: goodbyedpi.exe [OPTION...]
  -p          block passive DPI
