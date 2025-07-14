@@ -1,4 +1,4 @@
-Kaspersky Antivirüs Programı Hakkında Önemli Duyuru
+🛡️ Kaspersky Antivirüs Programı Hakkında Önemli Duyuru
 =========================
 İnternette dolaşan haberlerin aksine; şu ana kadar Kaspersky ile Rus hükümeti arasında, doğrudan "GoodbyeDPI’yi engellemek amacıyla yapılmış özel bir anlaşma" olduğuna dair herhangi bir resmi, teknik ya da sızdırılmış kanıt bulunmamaktadır. Dolayısıyla ne sızdırılmış belgelerde ne de hükümet açıklamalarında GoodbyeDPI’ye özel bir anlaşma veya hedefleme söz konusu değildir.
 
@@ -9,7 +9,7 @@ Kaspersky'nin GoodbyeDPI’yi engellemesi, büyük ihtimalle genel ağ güvenli�
 
 Bu davranış, Rusya özelinde değil; Kaspersky’nin genel ürün tasarımı ile ilgilidir. Yaklaşık 20 yıldır Antivirüs programı kullanmıyorum, gerek de duymuyorum. Bu engelleme ürün ayarlarından ince/gelişmiş bir ayar yaparak bu düzeltilebilir mi emin değilim. Bunu Kaspersky kullanan kullanıcılar ile forumda tartışabilir, fikir alışverişinde bulunabilirsiniz. Şayet bu konuda başarısız olursanız, tek yapmanız gereken Kaspersky bilgisayarınızdan tamamen kaldırmak, zira devre dışı bıraksanız bile büyük olasılıkla GoodBye DPI'ı yine de engelleyecektir.
 
-GoodbyeDPI Türkiye — Derin Paket İncelemesi Atlatma Aracı
+🇹🇷 GoodbyeDPI Türkiye — Derin Paket İncelemesi Atlatma Aracı
 =========================
 Bu proje Türkiye'de kalıcı olarak engellenmiş **Discord** ve bazı durumlarda engellenen **Instagram**, **Youtube** vb. web sitesi ve uygulamalara VPN kullanmadan ve İnternet hızında bir değişiklik olmadan giriş yapmanızı sağlamak için GoodByeDPI'ın orjinal deposundan çatallanmış ve düzenlenmiş bir sürümüdür.
 
@@ -22,7 +22,7 @@ Daha fazla bilgi için **GoodBye DPI Türkiye v0.2.3rc3/documents/turkish** klas
 > [!CAUTION]
 > **Windows 7, 8, 8.1, 10 ve 11** işletim sistemlerinde, komut dosyalarının **Yönetici** olarak çalıştırılması gerekir.
 
-Virüs, Veri Sızıntısı ve Bitcoin Madenciliği
+🦠 Virüs, Veri Sızıntısı ve Bitcoin Madenciliği
 =========================
 Yazılım açık kaynak kodlu olduğundan tüm kodları inceleyebilirsiniz. WinDivert.dll ve WinDivert64.sys dosyaları fonksiyonlarından dolayı bazı antivirüs programlarında virüs olarak algılanabilir.
 
@@ -33,7 +33,7 @@ Bu dosya da virüs var, bilgilerim çalındı vb. yalan yanlış ithamlarda bulu
 > [!NOTE]
 > Kodların ne işe yaradığını ve hangi amaçla yazıldığını öğrenmek için kod bilgisine sahip olmanıza da gerek yok [buraya](https://chatgpt.com/) tıklayın ardından **Bu kodlarda virüs var mı? Hangi amaçla yazılmış? Ne işe yarıyor? Bilgilerim çalınır mı? Bitcoin madenciği yapıyor mu?** sorununu yazdıktan sonra **SHIFT + ENTER** tuşlarına basarak 2 satır aşağı inin ve merak ettiğiniz kodu da yapıştırıp gönderin. :)
 
-Kullanım Yöntemi #1 : Elle Başlat
+👣 Kullanım Yöntemi #1 : Elle Başlat
 =========================
 
 Bu yöntemi kullanırsanız, bilgisayarınızı her yeniden başlattığınızda istediğiniz herhangi bir komut dosyasını Yönetici olarak elle çalıştırmak zorundasınız. **Türkiye** için en hızlı ve en güvenili olanları `01, 02, 03, 04, 05, 06 ve 07` olarak sıraladım.
@@ -44,7 +44,7 @@ Bu yöntemi kullanırsanız, bilgisayarınızı her yeniden başlattığınızda
 > [!NOTE]
 Bu komut dosyaları, GoodbyeDPI'ı önerilen modda başlatır ve çalıştırdığınız komut dosyasına göre DNS çözücü yönlendirmesini **CloudFlare, Google, Quad9, OpenDNS, AdGuard, Yandex ve Comodo** adreslerine (DNS zehirlenmesini engellemek için) standart olmayan bir port üzerinden gerçekleştirir. Eğer burada anlatıldığı gibi sorunsuz çalışıyorsa, olduğu gibi kullanmaya devam edebilir ya da diğer DNS hizmet sağlayıcıları için oluşturulmuş yapılandırma dosyalarını deneyebilir veya özelleştirebilirsiniz.
 
-Kullanım Yöntemi #2 : Otomatik Olarak Başlat
+👣 Kullanım Yöntemi #2 : Otomatik Olarak Başlat
 =========================
 Bu yöntemi kullanırsanız, bilgisayarınızı her yeniden başlattığınızda istediğiniz komut dosyasını **Başlangıç Programlarına** ekleyerek otomatik olarak başlatır ve ekstra birşey yapmanıza gerek kalmaz.
 
@@ -59,7 +59,7 @@ Bu yöntemi kullanırsanız, bilgisayarınızı her yeniden başlattığınızda
 > [!WARNING]
 > Bu yöntemin çalışması için komut dosyalarına bir kaç kod eklemem gerekiyor - henüz eklemedim!
 
-Kullanım Yöntemi #3 : Windows Hizmeti Olarak Başlat
+👣 Kullanım Yöntemi #3 : Windows Hizmeti Olarak Başlat
 =========================
 Bu yöntemi kullanırsanız, bilgisayarı her yeniden başlattığınızda GoodbyeDPI de bir Windows Hizmeti olarak başlatılır ve ekstra birşey yapmanıza gerek kalmaz.
 
@@ -72,7 +72,7 @@ Bu yöntemi kullanırsanız, bilgisayarı her yeniden başlattığınızda Goodb
 > [!WARNING]
 > Diğer `12, 13, 14 ve 15` numaralı `v2.cmd`, `v3.cmd`, `v4.cmd`, ve `v5.cmd` komut dosyalarını çalıştırmadan önce **18 - Hizmetleri Durdur ve Kaldır.cmd** komut dosyası ile herşeyi kaldırmayı ve temizlemeyi unutmayın.
 
-## Desteklenen Argümanlar
+♻️ ## Desteklenen Argümanlar
 Programınızın sürümü hakkında ilgili bilgileri almak için başlangıçta -h (--help) komutunu kullanabilirsiniz.
 ```
 Kullanımı: goodbyedpi.exe [OPTION...]
@@ -152,7 +152,7 @@ Modern Mod Setleri (daha kararlı, daha uyumlu, daha hızlı):
 NOT: --wrong-seq ve --wrong-chksum kombinasyonu, iki farklı sahte paket üretir.
 ```
 
-Bilinen Sorunlar
+⚠️ Bilinen Sorunlar
 =========================
 * Eski Windows 7 kurulumlarında, SHA256 dijital imzalarına yönelik desteğin olmaması nedeniyle WinDivert sürücüsünü yükleyemiyor. KB3033929 [x86](https://www.microsoft.com/en-us/download/details.aspx?id=46078)/[x64](https://www.microsoft.com/en-us/download/details.aspx?id=46148) güncelleme paketini yükleyin veya daha iyi seçenek olan Windows Güncelleme'yi kullanarak tüm sisteminizi en yeni sürüme güncelleyin.
 * Intel/Qualcomm Killer ağ kartları: Killer Control Center'daki Advanced Stream Detect, GoodbyeDPI ile uyumlu değil, [devre dışı bırakın](https://github.com/ValdikSS/GoodbyeDPI/issues/541#issuecomment-2296038239).
@@ -160,12 +160,12 @@ Bilinen Sorunlar
 * ~~Bazı SSL/TLS yığınları parçalanmış ClientHello paketlerini işleyemiyor ve HTTPS web siteleri açılmıyor. Hata: [#4](https://github.com/ValdikSS/GoodbyeDPI/issues/4), [#64](https://github.com/ValdikSS/GoodbyeDPI/issues/64).~~ Parçalanma sorunları v0.1.7'de düzeltildi.
 * ~~ESET Antivirus, WinDivert sürücüsüyle uyumsuzdur [#91](https://github.com/ValdikSS/GoodbyeDPI/issues/91). Bu büyük ihtimalle WinDivert değil, antivirüs hatasıdır.~~
 
-Yasal Sorumluluk
+👮 Yasal Sorumluluk
 =========================
 > [!IMPORTANT]
 Bu uygulama ve yazılım dosyalarının kullanımı sonucunda doğabilecek her türlü yasal sorumluluk, kullanıcıların kendine aittir. Uygulama ve yazılım dosyaları, açık kaynak kodludur ve yalnızca araştırma, eğitim, bilgi paylaşımı ve kodlama eğitimi amacıyla geliştirilmiştir. Bu şartlar altında kullanılıp, kullanılmaması tamamen kullanıcıların kendi insiyatifine bırakılmıştır. 
 
-Özel Teşekkürler
+❤️ Özel Teşekkürler
 =========================
 [Goodbye DPI](https://github.com/ValdikSS/GoodbyeDPI) geliştiricisi **@ValdikSS**'e teşekkürler.
 
