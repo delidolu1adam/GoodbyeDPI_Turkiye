@@ -74,6 +74,7 @@ Bu yöntemi kullanırsanız, bilgisayarı her yeniden başlattığınızda Goodb
 
 ♻️ ## Desteklenen Argümanlar
 Programınızın sürümü hakkında ilgili bilgileri almak için başlangıçta -h (--help) komutunu kullanabilirsiniz.
+=========================
 ```
 Kullanımı: goodbyedpi.exe [OPTION...]
  -p          block passive DPI
